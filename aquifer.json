@@ -35,6 +35,10 @@
       ]
     }
   },
-  "extensions": {},
+  "extensions": {
+    "aquifer-drush": {
+      "source": "aquifer-drush"
+    }
+  },
   "environments": {}
 }

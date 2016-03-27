@@ -3,5 +3,8 @@
   "version": "0.1.4",
   "description": "Drupal build, test, and deployment CLI.",
   "license": "GPL-2.0",
-  "repository": "none"
+  "repository": "none",
+  "dependencies": {
+    "aquifer-drush": "^0.1.0"
+  }
 }
