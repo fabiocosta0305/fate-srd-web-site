@@ -1,0 +1,40 @@
+{
+  "name": "fate-update",
+  "core": 7,
+  "paths": {
+    "make": "drupal.make.yml",
+    "settings": "settings",
+    "build": "build",
+    "root": "root",
+    "drush": "drush",
+    "themes": {
+      "root": "themes",
+      "contrib": "themes/contrib",
+      "custom": "themes/custom"
+    },
+    "modules": {
+      "root": "modules",
+      "contrib": "modules/contrib",
+      "custom": "modules/custom",
+      "features": "modules/features"
+    },
+    "files": {
+      "root": "files"
+    }
+  },
+  "run": {
+    "scripts": {
+      "refresh": [
+        "drush rr",
+        "drush cc drush",
+        "drush en -y master",
+        "drush master-execute -y --scope=local",
+        "drush updb -y",
+        "drush fra -y",
+        "drush cc drush"
+      ]
+    }
+  },
+  "extensions": {},
+  "environments": {}
+}
