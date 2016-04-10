@@ -46,6 +46,8 @@ projects:
     version: ~
   backup_migrate:
     version: ~
+  date:
+    version: ~
   devel:
     version: ~
   diff:
@@ -64,6 +66,8 @@ projects:
     version: ~
   libraries:
     version: ~
+  link:
+    version: ~
   menu_block:
     version: ~
   module_filter:
@@ -78,9 +82,9 @@ projects:
     version: ~
   xmlsitemap:
     version: ~
-  migrate: 
+  migrate:
     version: ~
-  migrate_d2d: 
+  migrate_d2d:
     version: ~
   menu_import:
     version: ~
@@ -99,7 +103,7 @@ projects:
 
   import_html:
     type: "module"
-    download: 
+    download:
       type: "file"
       url: "https://ftp.drupal.org/files/projects/import_html-7.x-1.0.zip"
   # Themes.

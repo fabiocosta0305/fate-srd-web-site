@@ -93,12 +93,5 @@ function fate_content_type_article_strongarm() {
   $strongarm->value = '[node:menu-link:menu]/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
 
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_taxonomy_term_fate_version_pattern';
-  $strongarm->value = '';
-  $export['pathauto_taxonomy_term_fate_version_pattern'] = $strongarm;
-
   return $export;
 }

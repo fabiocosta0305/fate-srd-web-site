@@ -79,6 +79,8 @@ $conf['master_modules'] = array(
     'custom_pagers',
     'menu_node',
     'menu_node_views',
+    'date',
+    'link',
 
     // Custom modules.
 
