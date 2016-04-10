@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fate MailChimp feature.
+ */
+
+include_once 'fate_mailchimp_feature.features.inc';

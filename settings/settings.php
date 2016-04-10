@@ -81,6 +81,11 @@ $conf['master_modules'] = array(
     'menu_node_views',
     'date',
     'link',
+    'mailchimp',
+    'mailchimp_activity',
+    'mailchimp_campaign',
+    'mailchimp_lists',
+    'mailchimp_signup',
 
     // Custom modules.
 
@@ -89,7 +94,8 @@ $conf['master_modules'] = array(
     'fate_content_type_article',
     'fate_menus',
     'fate_products',
-    'fate_products_view'
+    'fate_products_view',
+    'fate_mailchimp_feature'
 
   ),
   'local' => array(

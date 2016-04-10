@@ -100,6 +100,9 @@ projects:
     version: ~
   menu_node_views:
     version: ~
+  # Mailchimp
+  mailchimp:
+    version: ~
 
   import_html:
     type: "module"
@@ -118,4 +121,10 @@ libraries:
       url: "https://code.jquery.com/jquery-2.2.3.min.js"
     destination: "libraries"
     directory_name: "jquery"
-
+  mailchimp:
+    type: "library"
+    download:
+      type: "get"
+      url: "https://bitbucket.org/mailchimp/mailchimp-api-php/get/2.0.6.zip"
+    destination: "libraries"
+    directory_name: "mailchimp"
