@@ -53,10 +53,39 @@ $conf['master_modules'] = array(
     'strongarm',
     'token',
     'views',
+    // More modules.
+    'admin_views',
+    'backup_migrate',
+    'devel',
+    'diff',
+    'field_property',
+    'google_analytics',
+    'google_cse',
+    'honeypot',
+    'jqmulti',
+    'jquery_update',
+    'libraries',
+    'menu_block',
+    'module_filter',
+    'pathologic',
+    'views_bulk_operations',
+    'webform',
+    'wysiwyg',
+    'xmlsitemap',
+    'migrate',
+    'migrate_d2d',
+    'migrate_d2d_ui',
+    'menu_import',
+    'custom_pagers',
+    'menu_node',
+    'menu_node_views',
 
     // Custom modules.
 
     // Feature modules.
+    'fate_taxonomies',
+    'fate_content_type_article',
+    'fate_menus'
 
   ),
   'local' => array(

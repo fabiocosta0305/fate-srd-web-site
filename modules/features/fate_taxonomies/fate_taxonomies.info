@@ -1,0 +1,13 @@
+name = Fate Taxonomies
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = strongarm
+dependencies[] = taxonomy
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[taxonomy][] = fate_version
+features[taxonomy][] = publishers
+features[variable][] = pathauto_taxonomy_term_fate_version_pattern

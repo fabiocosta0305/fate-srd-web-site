@@ -1,0 +1,11 @@
+name = Fate Menus
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:2
+features[menu_custom][] = menu-fate-accelerated
+features[menu_custom][] = menu-fate-core
+features[menu_custom][] = menu-fate-system-toolkit
+features[menu_custom][] = menu-venture-city

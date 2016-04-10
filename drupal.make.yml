@@ -41,6 +41,78 @@ projects:
     version: ~
   views:
     version: ~
+  # More modules
+  admin_views:
+    version: ~
+  backup_migrate:
+    version: ~
+  devel:
+    version: ~
+  diff:
+    version: ~
+  field_property:
+    version: ~
+  google_analytics:
+    version: ~
+  google_cse:
+    version: ~
+  honeypot:
+    version: ~
+  jqmulti:
+    version: ~
+  jquery_update:
+    version: ~
+  libraries:
+    version: ~
+  menu_block:
+    version: ~
+  module_filter:
+    version: ~
+  pathologic:
+    version: ~
+  views_bulk_operations:
+    version: ~
+  webform:
+    version: ~
+  wysiwyg:
+    version: ~
+  xmlsitemap:
+    version: ~
+  migrate: 
+    version: ~
+  migrate_d2d: 
+    version: ~
+  menu_import:
+    version: ~
+  custom_pagers:
+    version: "1.x-dev"
+    patch:
+      # https://www.drupal.org/node/1288368#comment-6429832
+      - "https://www.drupal.org/files/custom_pagers-api_update-1288368-90.patch"
+      # https://www.drupal.org/node/1388628
+      - "https://www.drupal.org/files/custom_pagers-token-help.patch"
+  # Menu
+  menu_node:
+    version: ~
+  menu_node_views:
+    version: ~
+
+
+  import_html:
+    type: "module"
+    download: 
+      type: "file"
+      url: "https://ftp.drupal.org/files/projects/import_html-7.x-1.0.zip"
   # Themes.
   aurora:
     version: ~
+
+libraries:
+  ckeditor:
+    type: "library"
+    download:
+      type: "get"
+      url: "https://code.jquery.com/jquery-2.2.3.min.js"
+    destination: "libraries"
+    directory_name: "jquery"
+
