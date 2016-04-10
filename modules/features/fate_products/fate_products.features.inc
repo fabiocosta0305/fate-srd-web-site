@@ -22,11 +22,11 @@ function fate_products_ctools_plugin_api($module = NULL, $api = NULL) {
 function fate_products_node_info() {
   $items = array(
     'fate_books' => array(
-      'name' => t('Fate Publications'),
+      'name' => t('Fate products'),
       'base' => 'node_content',
-      'description' => t('This content type is for listing Fate publications on the site.'),
+      'description' => t('This content type is for listing Fate products on the site.'),
       'has_title' => '1',
-      'title_label' => t('Book Title'),
+      'title_label' => t('Title'),
       'help' => '',
     ),
   );
