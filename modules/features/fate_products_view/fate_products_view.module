@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fate Products View feature.
+ */
+
+include_once 'fate_products_view.features.inc';

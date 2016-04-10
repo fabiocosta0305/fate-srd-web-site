@@ -88,7 +88,8 @@ $conf['master_modules'] = array(
     'fate_taxonomies',
     'fate_content_type_article',
     'fate_menus',
-    'fate_products'
+    'fate_products',
+    'fate_products_view'
 
   ),
   'local' => array(
