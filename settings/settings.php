@@ -86,6 +86,11 @@ $conf['master_modules'] = array(
     'mailchimp_campaign',
     'mailchimp_lists',
     'mailchimp_signup',
+    'panels_ipe',
+    'panels_node',
+    'page_manager',
+    'panels_extras',
+    'menu_node_access',
 
     // Custom modules.
 

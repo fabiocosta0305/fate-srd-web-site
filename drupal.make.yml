@@ -32,6 +32,8 @@ projects:
   master:
     version: ~
   panels:
+    version: 3.x-dev
+  panels_extras:
     version: ~
   pathauto:
     version: ~
