@@ -100,7 +100,8 @@ $conf['master_modules'] = array(
     'fate_menus',
     'fate_products',
     'fate_products_view',
-    'fate_mailchimp_feature'
+    'fate_mailchimp_feature',
+    'fate_layouts'
 
   ),
   'local' => array(

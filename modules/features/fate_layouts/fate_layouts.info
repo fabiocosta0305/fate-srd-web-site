@@ -1,0 +1,11 @@
+name = Fate Layouts
+core = 7.x
+package = Features
+version = 7.x-1.0
+dependencies[] = ctools
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = panels_ipe
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_handlers][] = node_view__panel_context_dcfc0156-e7dc-4544-acc4-2f687ed78f00
