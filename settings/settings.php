@@ -63,7 +63,6 @@ $conf['master_modules'] = array(
     'google_cse',
     'honeypot',
     'jqmulti',
-    'jquery_update',
     'libraries',
     'menu_block',
     'module_filter',
@@ -101,7 +100,8 @@ $conf['master_modules'] = array(
     'fate_products',
     'fate_products_view',
     'fate_mailchimp_feature',
-    'fate_layouts'
+    'fate_layouts',
+    'fate_theme'
 
   ),
   'local' => array(

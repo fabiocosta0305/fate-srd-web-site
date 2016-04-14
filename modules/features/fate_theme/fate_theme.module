@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fate Theme feature.
+ */
+
+include_once 'fate_theme.features.inc';

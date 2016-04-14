@@ -97,11 +97,19 @@ projects:
       - "https://www.drupal.org/files/custom_pagers-api_update-1288368-90.patch"
       # https://www.drupal.org/node/1388628
       - "https://www.drupal.org/files/custom_pagers-token-help.patch"
+  html5_tools:
+    version: ~
+  elements: #html5_tools dependency
+    version: ~
+  magic:
+    version: ~
   # Menu
   menu_node:
     version: ~
   menu_node_views:
     version: ~
+  chosen:
+    version: "2.0-beta4"
   # Mailchimp
   mailchimp:
     version: ~
@@ -113,6 +121,7 @@ projects:
       url: "https://ftp.drupal.org/files/projects/import_html-7.x-1.0.zip"
   # Themes.
   aurora:
+    type: "theme"
     version: ~
 
 libraries:
@@ -130,3 +139,10 @@ libraries:
       url: "https://bitbucket.org/mailchimp/mailchimp-api-php/get/2.0.6.zip"
     destination: "libraries"
     directory_name: "mailchimp"
+  chosen:
+    type: "library"
+    download:
+      type: "get"
+      url: "https://github.com/harvesthq/chosen/releases/download/1.4.2/chosen_v1.4.2.zip"
+    destination: "libraries"
+    directory_name: "chosen"
