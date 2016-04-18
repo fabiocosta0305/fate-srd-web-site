@@ -1,5 +1,5 @@
-name = Fate SRD Updated
-description =  Fate theme.
+name = Fate SRD
+description =  Fate theme based on Aurora.
 core = 7.x
 base theme = aurora
 
