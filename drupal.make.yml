@@ -119,6 +119,9 @@ projects:
     download:
       type: "file"
       url: "https://ftp.drupal.org/files/projects/import_html-7.x-1.0.zip"
+      url: "https://ftp.drupal.org/files/projects/import_html-7.x-2.x-dev.tar.gz"
+    patch:
+      - "https://www.drupal.org/files/issues/import_html-fix_deprecated_preg_replace-2451895-2.patch"
   # Themes.
   aurora:
     type: "theme"

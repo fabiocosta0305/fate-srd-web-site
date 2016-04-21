@@ -90,6 +90,7 @@ $conf['master_modules'] = array(
     'page_manager',
     'panels_extras',
     'menu_node_access',
+    'chosen',
 
     // Custom modules.
 
