@@ -47,9 +47,9 @@ function fate_preprocess_html(&$vars) {
  * @param $vars
  *   An array of variables to pass to the theme template.
  */
-/* -- Delete this line if you want to use this function
 function fate_preprocess_page(&$vars) {
 
+  drupal_add_css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', 'external');
 }
 
 /**
