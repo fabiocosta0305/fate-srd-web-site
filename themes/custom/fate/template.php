@@ -49,7 +49,9 @@ function fate_preprocess_html(&$vars) {
  */
 function fate_preprocess_page(&$vars) {
 
-  drupal_add_css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', 'external');
+//  drupal_add_css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', 'external');
+  drupal_add_css(drupal_get_path('theme', 'fate') . '/css/main.css');
+
 }
 
 /**

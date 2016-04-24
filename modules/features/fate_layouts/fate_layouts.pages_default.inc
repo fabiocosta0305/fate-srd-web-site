@@ -46,7 +46,7 @@ function fate_layouts_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'twocol';
+  $display->layout = 'fate_article_page';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -54,6 +54,8 @@ function fate_layouts_default_page_manager_handlers() {
       'center' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'aside' => NULL,
+      'main-content' => NULL,
     ),
   );
   $display->cache = array();
@@ -62,39 +64,15 @@ function fate_layouts_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-bb344fae-4dff-497b-b7d9-715acd6a7c25';
-  $pane->panel = 'left';
-  $pane->type = 'menu_tree';
-  $pane->subtype = 'menu-venture-city';
+  $pane->pid = 'new-9005fe69-4f86-4e6b-b843-c5a00629a9d5';
+  $pane->panel = 'aside';
+  $pane->type = 'block';
+  $pane->subtype = 'menu-menu-fate-main-menu';
   $pane->shown = TRUE;
-  $pane->access = array(
-    'plugins' => array(
-      0 => array(
-        'name' => 'mna',
-        'settings' => array(
-          'menu' => array(
-            'menu-venture-city' => 'menu-venture-city',
-          ),
-        ),
-        'context' => 'argument_entity_id:node_1',
-        'not' => FALSE,
-      ),
-    ),
-  );
+  $pane->access = array();
   $pane->configuration = array(
-    'parent' => 'menu-venture-city:0',
-    'title_link' => 0,
-    'admin_title' => '',
-    'level' => '1',
-    'follow' => 0,
-    'depth' => '0',
-    'depth_relative' => 0,
-    'expanded' => 0,
-    'sort' => 0,
-    'menu_name' => 'menu-venture-city',
-    'parent_mlid' => '0',
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => '<none>',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
@@ -105,12 +83,12 @@ function fate_layouts_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'bb344fae-4dff-497b-b7d9-715acd6a7c25';
-  $display->content['new-bb344fae-4dff-497b-b7d9-715acd6a7c25'] = $pane;
-  $display->panels['left'][0] = 'new-bb344fae-4dff-497b-b7d9-715acd6a7c25';
+  $pane->uuid = '9005fe69-4f86-4e6b-b843-c5a00629a9d5';
+  $display->content['new-9005fe69-4f86-4e6b-b843-c5a00629a9d5'] = $pane;
+  $display->panels['aside'][0] = 'new-9005fe69-4f86-4e6b-b843-c5a00629a9d5';
   $pane = new stdClass();
   $pane->pid = 'new-99fa1c00-f46a-4263-81a7-41a4272f945d';
-  $pane->panel = 'right';
+  $pane->panel = 'main-content';
   $pane->type = 'node_title';
   $pane->subtype = 'node_title';
   $pane->shown = TRUE;
@@ -129,16 +107,19 @@ function fate_layouts_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'page-title',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '99fa1c00-f46a-4263-81a7-41a4272f945d';
   $display->content['new-99fa1c00-f46a-4263-81a7-41a4272f945d'] = $pane;
-  $display->panels['right'][0] = 'new-99fa1c00-f46a-4263-81a7-41a4272f945d';
+  $display->panels['main-content'][0] = 'new-99fa1c00-f46a-4263-81a7-41a4272f945d';
   $pane = new stdClass();
   $pane->pid = 'new-1b17a648-b41b-4a56-b909-5ab4bb305a01';
-  $pane->panel = 'right';
+  $pane->panel = 'main-content';
   $pane->type = 'node_body';
   $pane->subtype = 'node_body';
   $pane->shown = TRUE;
@@ -159,7 +140,7 @@ function fate_layouts_default_page_manager_handlers() {
   $pane->locks = array();
   $pane->uuid = '1b17a648-b41b-4a56-b909-5ab4bb305a01';
   $display->content['new-1b17a648-b41b-4a56-b909-5ab4bb305a01'] = $pane;
-  $display->panels['right'][1] = 'new-1b17a648-b41b-4a56-b909-5ab4bb305a01';
+  $display->panels['main-content'][1] = 'new-1b17a648-b41b-4a56-b909-5ab4bb305a01';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

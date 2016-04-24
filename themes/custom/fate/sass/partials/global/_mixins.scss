@@ -1,0 +1,61 @@
+/* ============================================================
+
+  Mixins
+
+============================================================ */
+
+@import 'mixins/gradients';
+
+/* ============================================================
+  Clearfix
+============================================================ */
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    display: table; // 2
+    content: " "; // 1
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* ============================================================
+  List Resets
+============================================================ */
+
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+  }
+}
+@mixin list-inline() {
+  li {
+    display: inline-block;
+  }
+}
+@mixin list-reset-inline() {
+  @include list-reset;
+  @include list-inline;
+}
+@mixin list-tighter() {
+  line-height: 1.2;
+  li {
+    margin-bottom: $unit;
+  }
+}
+
+/* ============================================================
+  Typography
+============================================================ */
+@mixin font-smoothing(){
+  font-smoothing         : antialiased;
+  -webkit-font-smoothing : antialiased;
+}

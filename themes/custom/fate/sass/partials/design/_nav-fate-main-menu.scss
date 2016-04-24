@@ -1,0 +1,28 @@
+/* ============================================================
+
+  Nav Fate Main Menu
+
+============================================================ */
+
+.pane-menu-menu-fate-main-menu {
+  .pane-content > .menu {
+    @include list-reset;
+
+    .list-header {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-top: $spacer;
+    }
+
+    ul {
+      font-size: .8em;
+      padding-left: $spacer;
+    }
+
+    a {
+      color: $textColor;
+      text-decoration: none;
+    }
+
+  }
+}

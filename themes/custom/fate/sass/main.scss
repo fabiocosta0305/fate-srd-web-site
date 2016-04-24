@@ -1,0 +1,30 @@
+/* ============================================================
+
+  Theme: Fate SRD
+  Author(s): Randy Oest oest@amazingrando.com
+
+============================================================ */
+
+
+/*  Reset, Vars, and Mixins
+============================================================ */
+@import 'partials/global/normalize';
+*, *:before, *:after { box-sizing: border-box; }
+@import 'partials/global/variables';
+@import 'partials/global/mixins';
+@import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import '../bower_components/singularity/stylesheets/singularitygs';
+
+@import 'partials/layout/article';
+
+@import 'partials/design/nav-fate-main-menu';
+
+
+@import 'partials/design/body';
+@import 'partials/design/typography';
+@import 'partials/design/main-content';
+@import 'partials/design/sidebar';
+
+
+
+

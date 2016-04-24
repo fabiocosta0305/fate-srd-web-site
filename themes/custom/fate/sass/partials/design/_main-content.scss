@@ -1,0 +1,11 @@
+.main-content {
+  @extend %inside-padding;
+  background-color: $lightGray;
+  box-shadow: $boxshadow;
+
+  .page-title h1 {
+    border-bottom: 1px solid $mediumGray;
+    margin-top: 0;
+    padding-bottom: $spacer-small;
+  }
+}

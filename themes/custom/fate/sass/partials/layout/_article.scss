@@ -1,0 +1,27 @@
+/* ============================================================
+
+  Article layout
+
+============================================================ */
+
+.content-wrapper {
+  @include clearfix;
+  @include add-grid(1);
+  @include add-grid(3 6 at $break-medium);
+  @include add-grid(3 9 at $break-large);
+  @include add-gutter(1/4);
+  padding: $spacer-xlarge $spacer-medium;
+
+  .main-content,
+  .sidebar {
+    @include grid-span(1, 1);
+  }
+  @include breakpoint($break-medium) {
+    .main-content {  @include grid-span(1, 2); }
+    .sidebar { @include grid-span(1, 1); }
+  }
+  @include breakpoint($break-large) {
+    .main-content { @include grid-span(1, 2); }
+    .sidebar { @include grid-span(1, 1); }
+  }
+}

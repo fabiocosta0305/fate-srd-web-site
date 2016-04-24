@@ -25,7 +25,6 @@ $conf['master_modules'] = array(
 
     // Core modules.
     'block',
-    'comment',
     'file',
     'help',
     'list',
@@ -91,6 +90,14 @@ $conf['master_modules'] = array(
     'panels_extras',
     'menu_node_access',
     'chosen',
+    'linkit',
+    'advanced_menu_core',
+    'advanced_menu_menu_admin',
+    'advanced_menu_blocks',
+    'advanced_menu_submenu',
+    'special_menu_items',
+    'menu_attributes',
+    'menu_expanded',
 
     // Custom modules.
 
