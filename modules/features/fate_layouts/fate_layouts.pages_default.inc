@@ -425,13 +425,17 @@ function fate_layouts_default_page_manager_handlers() {
   $display->content['new-1b17a648-b41b-4a56-b909-5ab4bb305a01'] = $pane;
   $display->panels['main-content'][1] = 'new-1b17a648-b41b-4a56-b909-5ab4bb305a01';
   $pane = new stdClass();
-  $pane->pid = 'new-74723dcd-a70d-4fe2-9efc-be8ea3039bdd';
+  $pane->pid = 'new-3c9781f1-948a-48fb-b163-8883554c67b1';
   $pane->panel = 'main-content';
-  $pane->type = 'block';
-  $pane->subtype = 'custom_pagers-1';
+  $pane->type = 'custom_pagers_pane';
+  $pane->subtype = 'custom_pagers_pane';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
+    'pager_id' => '1',
+    'context' => array(
+      0 => 'argument_entity_id:node_1',
+    ),
     'override_title' => 0,
     'override_title_text' => '',
     'override_title_heading' => 'h2',
@@ -442,9 +446,9 @@ function fate_layouts_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $pane->uuid = '74723dcd-a70d-4fe2-9efc-be8ea3039bdd';
-  $display->content['new-74723dcd-a70d-4fe2-9efc-be8ea3039bdd'] = $pane;
-  $display->panels['main-content'][2] = 'new-74723dcd-a70d-4fe2-9efc-be8ea3039bdd';
+  $pane->uuid = '3c9781f1-948a-48fb-b163-8883554c67b1';
+  $display->content['new-3c9781f1-948a-48fb-b163-8883554c67b1'] = $pane;
+  $display->panels['main-content'][2] = 'new-3c9781f1-948a-48fb-b163-8883554c67b1';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
