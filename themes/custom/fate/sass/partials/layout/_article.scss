@@ -21,6 +21,8 @@
     .sidebar { @include grid-span(1, 1); }
   }
   @include breakpoint($break-large) {
+    padding: $spacer-xlarge $spacer-large;
+
     .main-content { @include grid-span(1, 2); }
     .sidebar { @include grid-span(1, 1); }
   }

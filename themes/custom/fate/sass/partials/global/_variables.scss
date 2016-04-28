@@ -14,6 +14,8 @@ $mediumGray: darken($lightGray, 25%);
 $yellow: #FFF8B9;
 $orange: #FF9100;
 $textColor: #333;
+$linkColor: $blue;
+$linkHover: $purple;
 
 // Fonts
 $ff-sans: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -36,7 +38,8 @@ $break-large: 1000px;
 
 // Misc
 $img : "../img";
-$boxshadow: 5px 2px 19px 0 rgba(0,0,0,.7);
+$boxshadow: 2px 2px 19px 0 rgba(0,0,0,.7);
+$border-radius: 4px;
 
 %inside-padding {
   padding: $spacer-large $spacer-medium;

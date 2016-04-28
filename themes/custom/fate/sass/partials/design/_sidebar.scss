@@ -7,14 +7,6 @@
 .sidebar {
   @extend %inside-padding;
   @include gradient-vertical($yellow, darken($yellow,10%));
+  border-radius: $border-radius;
   box-shadow: $boxshadow;
-
-  .pane-title {
-    margin-top: 0;
-  }
-  .pane-menu-tree {
-    ul {
-      @include list-reset;
-    }
-  }
 }

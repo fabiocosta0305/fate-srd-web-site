@@ -1,0 +1,16 @@
+/* ============================================================
+
+  Links
+
+============================================================ */
+a,
+a:link {
+  color: $linkColor;
+  text-decoration: none;
+  transition: all .15s ease-in;
+
+  &:hover,
+  &:active {
+    color: $linkHover;
+  }
+}

@@ -6,6 +6,7 @@
  * @param $vars
  *   An array of variables to pass to the theme template.
  */
+/* -- Delete this line if you want to use this function
 function fate_preprocess_maintenance_page(&$vars) {
   // When a variable is manipulated or added in preprocess_html or
   // preprocess_page, that same work is probably needed for the maintenance page
@@ -49,9 +50,8 @@ function fate_preprocess_html(&$vars) {
  */
 function fate_preprocess_page(&$vars) {
 
-//  drupal_add_css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', 'external');
   drupal_add_css(drupal_get_path('theme', 'fate') . '/css/main.css');
-
+  drupal_add_js(drupal_get_path('theme', 'fate') . '/js/scripts.js');
 }
 
 /**

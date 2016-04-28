@@ -105,6 +105,8 @@ projects:
       - "https://www.drupal.org/files/custom_pagers-api_update-1288368-90.patch"
       # https://www.drupal.org/node/1388628
       - "https://www.drupal.org/files/custom_pagers-token-help.patch"
+      # https://www.drupal.org/node/2600142
+      - "https://www.drupal.org/files/issues/custom-pagers-2600142-2.patch"
   html5_tools:
     version: ~
   elements: #html5_tools dependency

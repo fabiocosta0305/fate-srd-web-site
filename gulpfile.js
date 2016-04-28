@@ -24,7 +24,8 @@
     'fonts': themeDir + '/fonts',
     'img': themeDir + '/img',
     'sass': themeDir + '/sass',
-    'js_src': themeDir + '/js_src'
+    'js_src': themeDir + '/js_src',
+    'js': themeDir + '/js'
   };
 
   gulp.task('browser-sync', function() {
@@ -32,6 +33,7 @@
       proxy: "http://build.fate-update.ar.dev"
     });
     gulp.watch(theme.sass + '/**/*.scss', ['styles']).on('change', browserSync.reload);
+    gulp.watch(theme.js_src + '/**/*.js', ['scripts']).on('change', browserSync.reload);
   });
 
   gulp.task('styles', function () {
@@ -45,6 +47,16 @@
         .pipe(minifyCSS())
       .pipe(sourcemaps.write('/'))
       .pipe(gulp.dest(theme.css));
+  });
+
+  gulp.task('scripts', function () {
+    return gulp.src(theme.js_src + '/**/*.js')
+      .pipe(concat('scripts.js'))
+      .pipe(gulp.dest(theme.js))
+      .pipe(rename('scripts.min.js'))
+      .pipe(stripDebug())
+      .pipe(uglify())
+      .pipe(gulp.dest(theme.js));
   });
 
 

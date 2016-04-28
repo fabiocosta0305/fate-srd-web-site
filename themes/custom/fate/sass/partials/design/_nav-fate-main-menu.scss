@@ -1,28 +1,44 @@
 /* ============================================================
 
-  Nav Fate Main Menu
+  Nav Fate Menu
 
 ============================================================ */
+.sidebar {
+  .pane-title {
+    margin-top: $spacer;
+    margin-bottom: $spacer-small;
+    font-size: 1em;
+    text-transform: uppercase;
+  }
 
-.pane-menu-menu-fate-main-menu {
-  .pane-content > .menu {
-    @include list-reset;
+  .pane-menu-tree {
+    border-bottom: 1px solid darken($yellow,45%);
+    margin-bottom: $spacer;
+    padding-bottom: $spacer;
 
-    .list-header {
-      font-size: 1.2em;
-      font-weight: bold;
-      margin-top: $spacer;
+    .menu {
+      @include list-reset;
+
+      li {
+        line-height: 1.1;
+        margin-bottom: $spacer-small;
+      }
+
+      ul {
+        @include list-reset;
+        font-size: .8em;
+        margin-top: $spacer-small;
+        padding-left: $spacer;
+
+        li {
+          line-height: 1.1;
+          margin-bottom: $spacer-small;
+        }
+
+        ul {
+          font-size:1em;
+        }
+      }
     }
-
-    ul {
-      font-size: .8em;
-      padding-left: $spacer;
-    }
-
-    a {
-      color: $textColor;
-      text-decoration: none;
-    }
-
   }
 }
