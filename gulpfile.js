@@ -1,6 +1,6 @@
-(function () {
+'use strict';
 
-  'use strict';
+(function () {
 
   var gulp        = require('gulp');
   var eslint      = require('gulp-eslint');
@@ -28,9 +28,9 @@
     'js': themeDir + '/js'
   };
 
-  gulp.task('browser-sync', function() {
+  gulp.task('browser-sync', function (){
     browserSync.init({
-      proxy: "http://build.fate-update.ar.dev"
+      proxy: 'http://build.fate-update.ar.dev'
     });
     gulp.watch(theme.sass + '/**/*.scss', ['styles']).on('change', browserSync.reload);
     gulp.watch(theme.js_src + '/**/*.js', ['scripts']).on('change', browserSync.reload);
