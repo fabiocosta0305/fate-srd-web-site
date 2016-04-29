@@ -47,11 +47,16 @@ function fate_content_type_article_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_article';
   $strongarm->value = array(
-    0 => 'menu-fate-accelerated',
-    1 => 'menu-fate-core',
-    2 => 'menu-fate-system-toolkit',
-    3 => 'main-menu',
-    4 => 'menu-venture-city',
+    0 => 'menu-atomic-robo',
+    1 => 'menu-fate-accelerated',
+    2 => 'menu-fate-core',
+    3 => 'menu-fate-system-toolkit',
+    4 => 'menu-frontier-spirit',
+    5 => 'menu-gods-and-monsters',
+    6 => 'main-menu',
+    7 => 'menu-sails-full-of-stars',
+    8 => 'menu-three-rocketeers',
+    9 => 'menu-venture-city',
   );
   $export['menu_options_article'] = $strongarm;
 
@@ -59,7 +64,7 @@ function fate_content_type_article_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_article';
-  $strongarm->value = 'menu-fate-system-toolkit:0';
+  $strongarm->value = 'menu-atomic-robo:0';
   $export['menu_parent_article'] = $strongarm;
 
   $strongarm = new stdClass();
