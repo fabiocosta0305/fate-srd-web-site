@@ -12,6 +12,7 @@ $darkRed: #53121D;
 $lightGray: #F9F9F9;
 $mediumGray: darken($lightGray, 25%);
 $yellow: #FFF8B9;
+$darkYellow: darken($yellow,45%);
 $orange: #FF9100;
 $textColor: #333;
 $linkColor: $blue;
@@ -36,11 +37,14 @@ $break-small: 400px;
 $break-medium: 700px;
 $break-large: 1000px;
 
+// Icons
+$icon-plus: '\f067';
+$icon-minus: '\f068';
+
+// Paths
+$img: "../img";
+$icomoon-font-path: "../fonts";
+
 // Misc
-$img : "../img";
 $boxshadow: 2px 2px 19px 0 rgba(0,0,0,.7);
 $border-radius: 4px;
-
-%inside-padding {
-  padding: $spacer-large $spacer-medium;
-}

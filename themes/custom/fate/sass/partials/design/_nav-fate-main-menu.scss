@@ -4,41 +4,163 @@
 
 ============================================================ */
 .sidebar {
+
   .pane-title {
-    margin-top: $spacer;
-    margin-bottom: $spacer-small;
+    color: $darkBlue;
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 1em;
+    padding-left: $spacer-small;
     text-transform: uppercase;
   }
 
   .pane-menu-tree {
-    border-bottom: 1px solid darken($yellow,45%);
-    margin-bottom: $spacer;
-    padding-bottom: $spacer;
+    border-bottom: 1px solid $darkYellow;
+    padding: $spacer 0;
 
-    .menu {
+    .pane-content {
+      padding: $spacer-small 0 0;
+    }
+
+    ul.menu {
       @include list-reset;
 
+      a {
+        display: block;
+        padding-top: $spacer-small;
+        padding-bottom: $spacer-small;
+        padding-left: $spacer-small;
+
+        &:hover {
+          background-color: darken($yellow,20%);
+        }
+
+        &.active {
+          color: $textColor;
+        }
+      }
+
       li {
+        border-bottom: 1px solid $darkYellow;
         line-height: 1.1;
-        margin-bottom: $spacer-small;
+        position: relative;
+      }
+      li.last {
+        border-bottom: none;
+        margin-bottom: 0;
       }
 
       ul {
         @include list-reset;
         font-size: .8em;
-        margin-top: $spacer-small;
+        margin-bottom: $spacer;
         padding-left: $spacer;
 
         li {
           line-height: 1.1;
-          margin-bottom: $spacer-small;
         }
 
-        ul {
-          font-size:1em;
-        }
+        ul { font-size:1em; }
+      }
+
+
+    }
+  }
+
+  // Menu controls for .no-js.
+  .no-js & {
+    .pane-menu-tree {
+      li:not(.active-trail) ul.menu {
+        display: none;
       }
     }
+  }
+
+  // Menu controls with .js.
+  .js & {
+    .pane-title {
+      cursor: pointer;
+
+      &:after {
+        color: darken($yellow,55%);
+        font-size: .8em;
+      }
+    }
+
+    // Main menu
+    .menu-closed {
+      .pane-title {
+        @include icon-after($icon-plus);
+      }
+      .pane-content {
+        display: none;
+      }
+    }
+    .menu-open {
+      .pane-title {
+        @include icon-after($icon-minus);
+      }
+    }
+
+    // Inside of the menus
+    li.has-menu-control a {
+      padding-right: 21px + 5px;
+    }
+    .menu-control {
+      display: block;
+      color: darken($yellow,50%);
+      cursor: pointer;
+      font-size: .9em;
+      line-height: 1.7em;
+      padding: 0 $spacer-small;
+      position: absolute;
+      top: 0;
+      right: 0;
+      text-align: center;
+      width: 21px;
+
+      &:hover { background-color: darken($yellow,20%); }
+
+      &.menu-open { @include icon-after($icon-minus, $margin: 0); }
+      &.menu-closed {
+        @include icon-after($icon-plus, $margin: 0);
+        + ul.menu {
+          display: none;
+        }
+      }
+      &:after { margin: 0; }
+    }
+
+    // li.menu-closed {
+    //   @include icon-after($icon-plus);
+    //   ul.menu { display: none; }
+    // }
+    // li.menu-open {
+    //   @include icon-after($icon-minus);
+    // }
+    // li.menu-open,
+    // li.menu-closed {
+    //
+    // }
+    // li.menu-controls {
+    //   display: flex;
+    //   align-items: stretch;
+    //   width: 100%;
+    //
+    //   &:after {
+    //     color: darken($yellow,55%);
+    //     cursor: pointer;
+    //     font-size: .8em;
+    //     padding: 5px;
+    //     position: absolute;
+    //     right: 5px;
+    //     top: 0px;
+    //     background-color: blue;
+    //     align-self: stretch;
+    //   }
+    //   &:after:hover {
+    //     background-color: red;
+    //   }
+    // }
   }
 }

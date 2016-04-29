@@ -5,8 +5,8 @@
 ============================================================ */
 
 .sidebar {
-  @extend %inside-padding;
   @include gradient-vertical($yellow, darken($yellow,10%));
+  padding: $spacer-large $spacer-medium;
   border-radius: $border-radius;
   box-shadow: $boxshadow;
 }
