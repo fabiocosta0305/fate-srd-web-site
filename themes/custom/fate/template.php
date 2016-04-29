@@ -52,6 +52,7 @@ function fate_preprocess_page(&$vars) {
 
   drupal_add_css(drupal_get_path('theme', 'fate') . '/css/main.css');
   drupal_add_js(drupal_get_path('theme', 'fate') . '/js/scripts.js');
+  drupal_add_js(drupal_get_path('theme', 'fate') . '/js/modernizr-custom.js');
 }
 
 /**
