@@ -37,6 +37,11 @@
     gulp.watch(theme.js_src + '/**/*.js', ['scripts']).on('change', browserSync.reload);
   });
 
+  gulp.task('watch', function (){
+    gulp.watch(theme.sass + '/**/*.scss', ['styles']).on('change', browserSync.reload);
+    gulp.watch(theme.js_src + '/**/*.js', ['scripts']).on('change', browserSync.reload);
+  });
+
   gulp.task('modernizr', function () {
     gulp.src(theme.sass + '/**/*.scss')
       .pipe(modernizr('modernizr-custom.js', {
