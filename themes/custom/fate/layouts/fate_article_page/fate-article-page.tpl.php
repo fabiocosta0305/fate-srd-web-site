@@ -13,7 +13,15 @@
   </section>
 
   <aside class="sidebar">
-    <?php print $content['aside']; ?>
+
+    <section class="nav-menu">
+      <?php print $content['menu']; ?>
+    </section>
+
+    <section class="sidebar-content">
+      <?php print $content['sidebar']; ?>
+    </section>
+
   </aside>
 
 </section>

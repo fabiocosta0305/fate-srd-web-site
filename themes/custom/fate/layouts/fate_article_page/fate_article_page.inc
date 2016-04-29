@@ -6,7 +6,8 @@ $plugin = array(
   'category' => t('Fate'),
   'theme' => 'fate-article-page',
   'regions' => array(
-    'aside' => t('Aside'),
+    'menu' => t('Menu'),
+    'sidebar' => t('Sidebar'),
     'main-content' => t('Main Content')
   ),
 );
