@@ -4,7 +4,7 @@
 
 ============================================================ */
 
-.sidebar {
+.nav-menu {
   @include gradient-vertical($yellow, darken($yellow,10%));
   padding: $spacer-large $spacer-medium;
   border-radius: $border-radius;
