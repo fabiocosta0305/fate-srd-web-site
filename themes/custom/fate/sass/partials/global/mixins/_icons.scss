@@ -1,0 +1,43 @@
+/* ============================================================
+  Icons
+============================================================ */
+@font-face {
+  font-family: 'icomoon';
+  src:    url('#{$icomoon-font-path}/icomoon.eot?qis1iy');
+  src:    url('#{$icomoon-font-path}/icomoon.eot?qis1iy#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/icomoon.ttf?qis1iy') format('truetype'),
+  url('#{$icomoon-font-path}/icomoon.woff?qis1iy') format('woff'),
+  url('#{$icomoon-font-path}/icomoon.svg?qis1iy#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin icon-after($icon, $top: 1px, $margin: 5px) {
+  &:after {
+    @include font-smoothing;
+    display: inline-block;
+    margin-left: $margin;
+    position: relative;
+    top: $top;
+
+    content: $icon;
+    font-family: 'icomoon';
+    text-decoration: none;
+    text-rendering: auto;
+  }
+}
+
+@mixin icon-before($icon, $top: 1px, $margin: 5px) {
+  &:before {
+    @include font-smoothing;
+    display: inline-block;
+    margin-right: $margin;
+    position: relative;
+    top: $top;
+
+    content: $icon;
+    font-family: 'icomoon';
+    text-decoration: none;
+    text-rendering: auto;
+  }
+}
