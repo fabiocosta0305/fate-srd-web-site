@@ -16,6 +16,7 @@
   var sourcemaps  = require('gulp-sourcemaps');
   var browserSync = require('browser-sync').create();
   var watch       = require('gulp-watch');
+  var modernizr   = require('gulp-modernizr');
 
   var themeDir = 'themes/custom/fate';
 
@@ -34,6 +35,21 @@
     });
     gulp.watch(theme.sass + '/**/*.scss', ['styles']).on('change', browserSync.reload);
     gulp.watch(theme.js_src + '/**/*.js', ['scripts']).on('change', browserSync.reload);
+  });
+
+  gulp.task('modernizr', function () {
+    gulp.src(theme.sass + '/**/*.scss')
+      .pipe(modernizr('modernizr-custom.js', {
+        options: [
+          'setClasses',
+          'addTest',
+          'html5printshiv',
+          'testProp',
+          'fnBind'
+        ]
+      }))
+      .pipe(uglify())
+      .pipe(gulp.dest(theme.js));
   });
 
   gulp.task('styles', function () {
