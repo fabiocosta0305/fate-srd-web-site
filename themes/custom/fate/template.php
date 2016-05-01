@@ -56,6 +56,26 @@ function fate_preprocess_page(&$vars) {
 }
 
 /**
+ * Search, change the style.
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ * https://www.drupal.org/node/154137.
+ */
+function fate_form_search_block_form_alter(&$form, &$form_state, $form_id) {
+  // http://drupal.stackexchange.com/questions/77116/how-do-i-use-font-awesome-on-a-drupal-form-submit-button
+  $form['actions']['submit']['#value'] = decode_entities('&#xf002;');
+  $form['actions']['submit']['#attributes']['class'][] = 'search-submit';
+  //https://www.drupal.org/node/154137
+  $form['search_block_form']['#attributes']['placeholder'] = t('Search...');
+  $form['search_block_form']['#title'] = t('<em>Search</em>'); // Change the text on the label element
+  $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
+  // https://www.drupal.org/node/45295
+  $form['search_block_form']['#attributes']['onblur'] = "jQuery(this).removeClass('search-active');";
+  $form['search_block_form']['#attributes']['onfocus'] = "jQuery(this).addClass('search-active');";
+}
+
+/**
  * Override or insert variables into the region templates.
  *
  * @param $vars
