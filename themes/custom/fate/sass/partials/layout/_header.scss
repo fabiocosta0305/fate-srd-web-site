@@ -1,0 +1,26 @@
+.header {
+  @include clearfix;
+  @include add-grid(4 2);
+  @include add-grid(2 1 at $break-medium);
+  @include add-gutter(1/4);
+  padding: $spacer $spacer-medium;
+
+  .site-name {
+    @include grid-span(1, 1);
+  }
+  .block-search {
+    @include grid-span(1, 2);
+  }
+
+  @include breakpoint($break-medium) {
+    padding: $spacer $spacer-large;
+
+    .site-name {
+      @include grid-span(1, 1);
+    }
+    .block-search {
+      @include grid-span(1, 2);
+      text-align: right;
+    }
+  }
+}

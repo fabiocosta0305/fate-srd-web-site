@@ -68,9 +68,7 @@
 ?>
 
 <?php if ($page['header']): ?>
-  <header id="header" role="banner">
-    <?php print render($page['header']); ?>
-  </header>
+  <?php print render($page['header']); ?>
 <?php endif; ?>
 
 <?php if ($page['main_prefix']): ?>

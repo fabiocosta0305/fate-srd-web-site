@@ -4,7 +4,10 @@
 
 ============================================================ */
 .nav-menu {
-
+  .panels-ipe-region {
+    border-top: 1px solid $darkYellow;
+  }
+  
   .pane-title {
     color: $darkBlue;
     margin-top: 0;

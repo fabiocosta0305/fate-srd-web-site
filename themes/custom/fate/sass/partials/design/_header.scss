@@ -1,0 +1,21 @@
+.header {
+  @include gradient-vertical($blue, darken($blue,10%));
+  box-shadow: 0 2px 19px 0 rgba(0,0,0,.7);
+
+  .site-name {
+    font-size: 1.5em;
+
+    a { color: #FFF; }
+  }
+
+  .short-title {
+    @include breakpoint($break-medium) {
+      display: none;
+    }
+  }
+  .long-title {
+    @include breakpoint(max-width $break-medium) {
+      display: none;
+    }
+  }
+}
