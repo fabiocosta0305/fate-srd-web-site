@@ -1,0 +1,11 @@
+.aspect {
+  background: $yellow;
+  color: lighten($textColor,10%);
+  font-family: $ff-sketch;
+  font-size: .95em;
+  padding: 0 $spacer-small;
+
+  //.cke_editable & {
+  //  background: @yellow;
+  //}
+}

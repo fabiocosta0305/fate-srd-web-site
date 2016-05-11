@@ -1,0 +1,6 @@
+blockquote {
+  margin: $spacer $spacer-medium;
+  color: lighten($textColor,20%);
+  font-family: $ff-sketch;
+  font-size: .9em;
+}
