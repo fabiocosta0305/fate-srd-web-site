@@ -1,0 +1,20 @@
+.nav-footer {
+  margin-bottom: $spacer-large;
+  border-bottom: 1px solid $textColor;
+
+  ul {
+    @include list-reset-inline;
+
+    li {
+      margin-right: $spacer-small;
+    }
+  }
+  a {
+    display: block;
+    padding: $spacer-small $spacer $spacer-small 0;
+
+    &.active {
+      color: #FFF;
+    }
+  }
+}

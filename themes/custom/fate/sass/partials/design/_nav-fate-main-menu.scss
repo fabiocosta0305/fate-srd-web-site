@@ -10,7 +10,7 @@
   box-shadow: $boxshadow;
 
   @include breakpoint($break-medium) {
-    padding: $spacer-large $spacer-medium;
+    padding: $spacer-medium;
   }
 
   .panels-ipe-region {

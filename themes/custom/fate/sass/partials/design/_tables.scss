@@ -1,0 +1,74 @@
+table.ladder {
+  border-collapse: collapse;
+  margin-bottom: 2em;
+
+  tr {
+    td {
+      border-bottom: 1px solid darken($lightGray, 20%);
+      padding: .25em .5em;
+    }
+  }
+}
+
+table.skill-list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th {
+    background: darken($lightGray, 15%);
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+  td {
+    border-bottom: 1px solid darken($lightGray, 15%);
+    padding: .5em 0;
+    text-align: center;
+
+    &:first-child {
+      padding-left: .5em;
+      text-align: left;
+    }
+
+    span {
+      font-size: 0px;
+
+      &:after {
+        color: lighten($textColor, 25%);
+        //content: @check;
+        //font-family: @ff-fontawesome;
+        font-size: 16px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+  tr {
+    transition: all .1s;
+
+    &:hover {
+      background: darken($lightGray, 5%);
+
+      td span:after {
+        color: $blue;
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    th, td:first-child {
+      font-size: .75em;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

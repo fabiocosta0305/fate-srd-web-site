@@ -1,0 +1,25 @@
+.footer {
+  background: rgba($textColor, 0.5);
+  color: $footerTextColor;
+
+  a {
+    color: $yellow;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  img.pull-right {
+    margin: 0 0 $spacer-medium $spacer-medium;
+    float: right;
+    max-width: 50%;
+
+    @include breakpoint($break-medium) {
+      max-width: 25%;
+    }
+  }
+}
+.footer-content {
+  font-size: .85em;
+}

@@ -1,0 +1,7 @@
+.footer {
+  padding: $spacer;
+
+  @include breakpoint($break-medium) {
+    padding: $spacer $spacer-large;
+  }
+}

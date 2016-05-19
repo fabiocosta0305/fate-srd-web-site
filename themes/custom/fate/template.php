@@ -93,9 +93,11 @@ function fate_preprocess_region(&$vars) {
  * @param $vars
  *   An array of variables to pass to the theme template.
  */
-/* -- Delete this line if you want to use this function
 function fate_preprocess_block(&$vars) {
 
+  if ($vars['block']->module == 'menu' && $vars['block']->delta == 'menu-footer') {
+    $vars['classes_array'][] = drupal_html_class('nav-footer');
+  }
 }
 // */
 
@@ -168,10 +170,18 @@ function fate_preprocess_views_view(&$vars) {
  * @param $css
  *   An array of all CSS items being requested on the page.
  */
-/* -- Delete this line if you want to use this function
 function fate_css_alter(&$css) {
-
+  foreach ($css as $key => $value) {
+    if ($value['group'] != CSS_THEME) {
+      $exclude[$key] = FALSE;
+    }
+  }
+  if (!(bool)$GLOBALS['user']->uid){
+    $css = array_diff_key($css, $exclude);
+  }
+   unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
 }
+
 // */
 
 /**

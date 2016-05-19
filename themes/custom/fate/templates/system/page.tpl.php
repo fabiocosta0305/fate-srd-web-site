@@ -88,7 +88,9 @@
 
 
 <?php if ($page['footer']): ?>
-  <footer id="footer" role="contentinfo">
-    <?php print render($page['footer']); ?>
+  <footer id="footer" role="contentinfo" class="footer">
+    <div class="footer-content">
+      <?php print render($page['footer']); ?>
+    </div>
   </footer>
 <?php endif; ?>
