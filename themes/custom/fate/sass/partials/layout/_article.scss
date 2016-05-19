@@ -10,7 +10,11 @@
   @include add-grid(3 6 at $break-medium);
   @include add-grid(3 9 at $break-large);
   @include add-gutter(1/4);
-  padding: $spacer-xlarge $spacer-medium;
+  padding: $spacer-large $spacer;
+
+  @include breakpoint($break-medium) {
+    padding: $spacer-medium $spacer-medium;
+  }
 
   .main-content,
   .sidebar {

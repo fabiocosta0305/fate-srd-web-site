@@ -12,7 +12,7 @@
     <?php print $content['main-content']; ?>
   </section>
 
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
 
     <section class="nav-menu">
       <?php print $content['menu']; ?>

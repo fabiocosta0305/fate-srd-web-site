@@ -1,0 +1,17 @@
+.menu-button {
+  display: block;
+  background: $darkBlue;
+  border-radius: $border-radius;
+  font-size: .8em;
+  padding: $spacer $spacer;
+
+  &:hover {
+    background-color: darken($darkBlue,5%);
+  }
+}
+.menu-toggle {
+  @include icon-before($icon-bars);
+}
+.menu-search {
+  @include icon-before($icon-search, $margin: 0);
+}

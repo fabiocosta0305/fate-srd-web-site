@@ -2,8 +2,14 @@
   background-color: $lightGray;
   border-radius: $border-radius;
   box-shadow: $boxshadow;
-  padding: $spacer-xlarge;
+  margin-bottom: $spacer-medium;
+  padding: $spacer-large $spacer-medium ;
   position: relative;
+
+  @include breakpoint($break-medium) {
+    margin-bottom: 0;
+    padding: $spacer-xlarge;
+  }
 
   &:after,
   &:before {

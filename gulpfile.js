@@ -13,6 +13,7 @@
   var browserSync = require('browser-sync');
   var sass        = require('gulp-sass');
   var sassLint    = require('gulp-sass-lint');
+  var sassGlob    = require('gulp-sass-glob');
   var sourcemaps  = require('gulp-sourcemaps');
   var browserSync = require('browser-sync').create();
   var watch       = require('gulp-watch');
@@ -59,6 +60,7 @@
 
   gulp.task('styles', function () {
     return gulp.src(theme.sass + '/**/*.scss')
+      .pipe(sassGlob())
       .pipe(sassLint())
       .pipe(sassLint.format())
       .pipe(sassLint.failOnError())

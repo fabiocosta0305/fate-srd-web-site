@@ -4,10 +4,19 @@
 
 ============================================================ */
 .nav-menu {
+  @include gradient-vertical($yellow, darken($yellow,10%));
+  padding: $spacer * 1.5;
+  border-radius: $border-radius;
+  box-shadow: $boxshadow;
+
+  @include breakpoint($break-medium) {
+    padding: $spacer-large $spacer-medium;
+  }
+
   .panels-ipe-region {
     border-top: 1px solid $darkYellow;
   }
-  
+
   .pane-title {
     color: $darkBlue;
     margin-top: 0;
@@ -133,37 +142,5 @@
       }
       &:after { margin: 0; }
     }
-
-    // li.menu-closed {
-    //   @include icon-after($icon-plus);
-    //   ul.menu { display: none; }
-    // }
-    // li.menu-open {
-    //   @include icon-after($icon-minus);
-    // }
-    // li.menu-open,
-    // li.menu-closed {
-    //
-    // }
-    // li.menu-controls {
-    //   display: flex;
-    //   align-items: stretch;
-    //   width: 100%;
-    //
-    //   &:after {
-    //     color: darken($yellow,55%);
-    //     cursor: pointer;
-    //     font-size: .8em;
-    //     padding: 5px;
-    //     position: absolute;
-    //     right: 5px;
-    //     top: 0px;
-    //     background-color: blue;
-    //     align-self: stretch;
-    //   }
-    //   &:after:hover {
-    //     background-color: red;
-    //   }
-    // }
   }
 }

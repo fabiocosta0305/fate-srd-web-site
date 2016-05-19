@@ -1,26 +1,33 @@
 .header {
-  @include clearfix;
-  @include add-grid(4 2);
-  @include add-grid(2 1 at $break-medium);
-  @include add-gutter(1/4);
-  padding: $spacer $spacer-medium;
-
-  .site-name {
-    @include grid-span(1, 1);
-  }
-  .block-search {
-    @include grid-span(1, 2);
-  }
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: $spacer;
 
   @include breakpoint($break-medium) {
     padding: $spacer $spacer-large;
+  }
 
-    .site-name {
-      @include grid-span(1, 1);
+  .site-name {
+    margin-right: auto;
+    @include breakpoint(max-width $break-medium) {
+      margin: 0 auto;
     }
-    .block-search {
-      @include grid-span(1, 2);
-      text-align: right;
+  }
+  .menu-toggle {
+    @include breakpoint($break-medium) {
+      display: none;
+    }
+  }
+  .menu-search {
+    @include breakpoint(400px) {
+      display: none;
+    }
+  }
+  .block-search {
+    width: 10em;
+    @include breakpoint(max-width 400px) {
+      display: none;
     }
   }
 }

@@ -1,11 +1,16 @@
 .header {
   @include gradient-vertical($blue, darken($blue,10%));
   box-shadow: 0 2px 19px 0 rgba(0,0,0,.7);
+  line-height: 1;
+
+  a,
+  a:hover,
+  a:link:hover {
+    color: #FFF;
+  }
 
   .site-name {
     font-size: 1.5em;
-
-    a { color: #FFF; }
   }
 
   .short-title {
