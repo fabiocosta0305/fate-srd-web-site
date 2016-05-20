@@ -1,3 +1,10 @@
+table {
+  th,
+  td {
+    padding: $spacer-small $spacer;
+  }
+}
+
 table.ladder {
   border-collapse: collapse;
   margin-bottom: 2em;
@@ -32,15 +39,11 @@ table.skill-list {
     }
 
     span {
+      @include icon-after($icon-check-square, $margin: 0);
       font-size: 0px;
 
       &:after {
-        color: lighten($textColor, 25%);
-        //content: @check;
-        //font-family: @ff-fontawesome;
         font-size: 16px;
-        position: relative;
-        top: 2px;
       }
     }
   }
@@ -49,15 +52,10 @@ table.skill-list {
 
     &:hover {
       background: darken($lightGray, 5%);
-
-      td span:after {
-        color: $blue;
-        font-size: 22px;
-      }
     }
   }
 
-  @media screen and (max-width: 480px) {
+  @include breakpoint(max-width $break-small) {
     th, td:first-child {
       font-size: .75em;
     }

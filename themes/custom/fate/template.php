@@ -171,14 +171,15 @@ function fate_preprocess_views_view(&$vars) {
  *   An array of all CSS items being requested on the page.
  */
 function fate_css_alter(&$css) {
-  foreach ($css as $key => $value) {
-    if ($value['group'] != CSS_THEME) {
-      $exclude[$key] = FALSE;
-    }
-  }
-  if (!(bool)$GLOBALS['user']->uid){
-    $css = array_diff_key($css, $exclude);
-  }
+
+//  if (!(bool)$GLOBALS['user']->uid){
+//    foreach ($css as $key => $value) {
+//      if ($value['group'] != CSS_THEME) {
+//        $exclude[$key] = FALSE;
+//      }
+//    }
+//    $css = array_diff_key($css, $exclude);
+//  }
    unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
 }
 

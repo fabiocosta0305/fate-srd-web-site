@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'fate';
+  src: url('#{$font-path}/fate_core_font-webfont.eot');
+  src: url('#{$font-path}/fate_core_font-webfont.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/fate_core_font-webfont.woff') format('woff'),
+  url('#{$font-path}/fate_core_font-webfont.ttf') format('truetype'),
+  url('#{$font-path}/fate_core_font-webfont.svg#fate_core_glyphsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+span.fate_font {
+  font-family: $ff-fate;
+  font-weight: normal;
+
+  &.big {
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+}
