@@ -76,7 +76,7 @@
 <?php endif; ?>
 
 <?php if ($page['content']): ?>
-  <main id="main" role="main">
+  <main id="main" role="main" class="main-content-wrapper">
     <?php print render($page['content']); ?>
   </main>
 <?php endif; ?>

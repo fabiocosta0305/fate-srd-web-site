@@ -1,4 +1,4 @@
-.main-content {
+@mixin main-content-area {
   background-color: $lightGray;
   border-radius: $border-radius;
   box-shadow: $boxshadow;
@@ -6,7 +6,7 @@
   padding: $spacer-large $spacer-medium ;
   position: relative;
 
-  @include breakpoint($break-medium) {
+  @include breakpoint($break-large) {
     margin-bottom: 0;
     padding: $spacer-xlarge;
   }
@@ -29,11 +29,21 @@
     top:-5px;
     transform: rotate(.25deg);
   }
+}
+.main-content {
+  @include main-content-area;
 
   .page-title h1 {
     border-bottom: 1px solid $mediumGray;
     font-size: 2.5em;
     margin-top: 0;
     padding-bottom: $spacer-small;
+  }
+}
+
+.main-content-wrapper > .block {
+  .page-search & {
+    @include main-content-area;
+    margin: $spacer-large;
   }
 }
