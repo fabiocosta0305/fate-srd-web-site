@@ -12,12 +12,12 @@
   font-style: normal;
 }
 
-@mixin icon-after($icon, $top: 1px, $margin: 5px) {
+@mixin icon-after($icon, $top: 1px, $margin: 5px, $position: relative) {
   &:after {
     @include font-smoothing;
     display: inline-block;
     margin-left: $margin;
-    position: relative;
+    position: $position;
     top: $top;
 
     content: $icon;

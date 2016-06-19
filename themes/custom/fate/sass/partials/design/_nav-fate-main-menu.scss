@@ -23,6 +23,8 @@
     margin-bottom: 0;
     font-size: 1em;
     padding-left: $spacer-small;
+    padding-right: 16px;
+    position: relative;
     text-transform: uppercase;
   }
 
@@ -96,13 +98,14 @@
       &:after {
         color: darken($yellow,55%);
         font-size: .8em;
+        right: 6px;
       }
     }
 
     // Main menu
     .menu-closed {
       .pane-title {
-        @include icon-after($icon-plus);
+        @include icon-after($icon-plus, $position: absolute, $top: 3px);
       }
       .pane-content {
         display: none;
@@ -110,7 +113,7 @@
     }
     .menu-open {
       .pane-title {
-        @include icon-after($icon-minus);
+        @include icon-after($icon-minus, $position: absolute, $top: 3px);
       }
     }
 
