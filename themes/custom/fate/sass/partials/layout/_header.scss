@@ -5,7 +5,7 @@
   padding: $spacer;
 
   @include breakpoint($break-medium) {
-    padding: $spacer $spacer-large;
+    padding: $spacer *1.5 $spacer-large;
   }
 
   .site-name {
@@ -20,13 +20,13 @@
     }
   }
   .menu-search {
-    @include breakpoint(400px) {
+    @include breakpoint($break-show-searchbar) {
       display: none;
     }
   }
   .block-search {
     width: 10em;
-    @include breakpoint(max-width 400px) {
+    @include breakpoint(max-width $break-show-searchbar) {
       display: none;
     }
   }

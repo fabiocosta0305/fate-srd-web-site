@@ -1,7 +1,7 @@
 .menu-search {
   span {
     display: none;
-    @media screen and (min-width: 400px) {
+    @media screen and (min-width: $break-show-searchbar) {
       display: inline;
     }
   }

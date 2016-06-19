@@ -30,7 +30,7 @@
     'js': themeDir + '/js'
   };
 
-  gulp.task('browser-sync', function (){
+  gulp.task('serve', function (){
     browserSync.init({
       proxy: 'http://build.fate-update.ar.dev'
     });
