@@ -11,11 +11,11 @@
 (function ($, Drupal) {
   Drupal.behaviors.fateNav = {
     attach: function (context) {
-      var menus = $('.pane-menu-tree', context),
-          headers = $('.pane-menu-tree .pane-title:not(.active-menu)');
+      var menus = $('.nav-section-content', context),
+          headers = $('.nav-section-title', context);
 
       /**
-       * Process menus so they are accordians.
+       * Process menus so they are accordions.
        * @param  {jQuery} menus [The menus we process.]
        * @return null.
        */
@@ -24,11 +24,12 @@
         $this.children('.active-trail').addClass('active-menu');
 
         if ($this.find('.active-trail').length > 0) {
-          $this.addClass('menu-open').find('.pane-title').addClass('active-menu');
+          $this.addClass('menu-open').parents('.nav-section').addClass('menu-open');
         } else {
-          $this.addClass('menu-closed');
+          $this.addClass('menu-closed').parents('.nav-section').addClass('menu-closed');
         }
       });
+
 
       /**
        * Headers will toggle menus.
@@ -36,7 +37,11 @@
        * @return null
        */
       $(headers).on('click',function () {
-        $(this).parents('.pane-menu-tree').toggleClass('menu-open menu-closed');
+        $(this)
+          .siblings('.nav-section-content')
+          .toggleClass('menu-open menu-closed')
+          .parents('.nav-section')
+          .toggleClass('menu-open menu-closed');
       });
 
       /**
@@ -53,6 +58,7 @@
         }
         $(this).addClass('has-menu-control');
       });
+
       $('.menu-control').on('click', function (){
         $(this).toggleClass('menu-closed menu-open');
       });

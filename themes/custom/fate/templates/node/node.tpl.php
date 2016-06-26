@@ -78,22 +78,9 @@
  * @see template_process()
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> main-content"<?php print $attributes; ?>>
 
-  <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page): ?>
-      <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>" rel="bookmark"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-  </header>
-
-  <?php if ($display_submitted): ?>
-    <footer>
-      <?php print $user_picture; ?>
-      <p class="submitted"><?php print $submitted; ?></p>
-    </footer>
-  <?php endif; ?>
+  <h1 class="page-title"><?php print $title; ?></h1>
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
@@ -103,8 +90,5 @@
       print render($content);
     ?>
   </div>
-
-  <?php print render($content['links']); ?>
-  <?php print render($content['comments']); ?>
 
 </article>

@@ -53,6 +53,36 @@ function fate_preprocess_page(&$vars) {
   drupal_add_css(drupal_get_path('theme', 'fate') . '/css/main.css');
   drupal_add_js(drupal_get_path('theme', 'fate') . '/js/scripts.js');
   drupal_add_js(drupal_get_path('theme', 'fate') . '/js/modernizr-custom.js');
+
+  /*
+   * Main menu
+   */
+  $menus = [
+    'menu-fate-core',
+    'menu-fate-accelerated',
+    'menu-fate-system-toolkit',
+    'menu-atomic-robo',
+    'menu-frontier-spirit',
+    'menu-gods-and-monsters',
+    'menu-sails-full-of-stars',
+    'menu-three-rocketeers',
+    'menu-venture-city',
+  ];
+  $block_module = 'menu';
+  $navMenu = '<nav class="nav-menu">';
+
+  foreach ($menus as &$menuItem) {
+    $navMenu .= '<section class="nav-section">';
+    $block = module_invoke($block_module, 'block_view', $menuItem);
+    $navMenu .= '<h3 class="nav-section-title">'.$block['subject'].'</h3>';
+    $navMenu .= '<section class="nav-section-content">';
+    $navMenu .= render($block['content']);
+    $navMenu .= '</section></section>';
+  }
+
+  $navMenu .= '</nav>';
+  $vars['navMenu'] = $navMenu;
+
 }
 
 /**
@@ -196,3 +226,12 @@ function fate_js_alter(&$js) {
 
 }
 // */
+
+
+function insert_block($block_module, $block_delta, $print_title = NULL){
+  $block = block_load($block_module, $block_delta);
+  $render_array = _block_get_renderable_array(_block_render_blocks(array($block)));
+  $output = render($render_array);
+  if ($print_title) { print "<h3>$block->title</h3>"; }
+  print $output;
+}

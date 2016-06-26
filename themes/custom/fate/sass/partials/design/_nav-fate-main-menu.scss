@@ -13,11 +13,13 @@
     padding: $spacer-medium;
   }
 
-  .panels-ipe-region {
+  .nav-section {
     border-top: 1px solid $darkYellow;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
   }
 
-  .pane-title {
+  h3 {
     color: $darkBlue;
     margin-top: 0;
     margin-bottom: 0;
@@ -28,56 +30,49 @@
     text-transform: uppercase;
   }
 
-  .pane-menu-tree {
-    border-bottom: 1px solid $darkYellow;
-    padding: $spacer 0;
+  .nav-section-content {
+    margin-top: $spacer;
+  }
 
-    .pane-content {
-      padding: $spacer-small 0 0;
+  ul.menu {
+    @include list-reset;
+
+    a {
+      display: block;
+      padding-top: $spacer-small;
+      padding-bottom: $spacer-small;
+      padding-left: $spacer-small;
+
+      &:hover {
+        background-color: darken($yellow,20%);
+      }
+
+      &.active {
+        color: $textColor;
+      }
     }
 
-    ul.menu {
+    li {
+      border-bottom: 1px solid $darkYellow;
+      line-height: 1.1;
+      position: relative;
+    }
+    li.last {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    ul {
       @include list-reset;
-
-      a {
-        display: block;
-        padding-top: $spacer-small;
-        padding-bottom: $spacer-small;
-        padding-left: $spacer-small;
-
-        &:hover {
-          background-color: darken($yellow,20%);
-        }
-
-        &.active {
-          color: $textColor;
-        }
-      }
+      font-size: .8em;
+      margin-bottom: $spacer;
+      padding-left: $spacer;
 
       li {
-        border-bottom: 1px solid $darkYellow;
         line-height: 1.1;
-        position: relative;
-      }
-      li.last {
-        border-bottom: none;
-        margin-bottom: 0;
       }
 
-      ul {
-        @include list-reset;
-        font-size: .8em;
-        margin-bottom: $spacer;
-        padding-left: $spacer;
-
-        li {
-          line-height: 1.1;
-        }
-
-        ul { font-size:1em; }
-      }
-
-
+      ul { font-size:1em; }
     }
   }
 
@@ -92,7 +87,7 @@
 
   // Menu controls with .js.
   .js & {
-    .pane-title {
+    h3 {
       cursor: pointer;
 
       &:after {
@@ -104,15 +99,15 @@
 
     // Main menu
     .menu-closed {
-      .pane-title {
+      .nav-section-title {
         @include icon-after($icon-plus, $position: absolute, $top: 3px);
       }
-      .pane-content {
+      &.nav-section-content {
         display: none;
       }
     }
     .menu-open {
-      .pane-title {
+      .nav-section-title {
         @include icon-after($icon-minus, $position: absolute, $top: 3px);
       }
     }
