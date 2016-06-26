@@ -1,0 +1,15 @@
+@mixin button($bkgc: $blue, $padding: 0 $spacer-small) {
+  display: inline-block;
+  background: $bkgc;
+  border: $darkBlue 1px solid;
+  border-bottom-width: 3px;
+  border-radius: $border-radius;
+  color: #FFF;
+  padding: $padding;
+  position: relative;
+
+  &:hover {
+    background-color: darken($bkgc, 5%);
+    color: #FFF;
+  }
+}

@@ -77,17 +77,21 @@
 
 <?php if ($page['content']): ?>
   <main id="main" role="main" class="content-wrapper">
-    <?php print render($page['content']); ?>
-      <aside class="sidebar" id="sidebar">
-        <?php print $navMenu; ?>
-        <?php print render($page['sidebar']); ?>
-      </aside>
+    <article class="main-content">
+      <?php print render($page['content']); ?>
+      <?php if ($page['main_suffix']): ?>
+        <?php print render($page['main_suffix']); ?>
+      <?php endif; ?>
+    </article>
+
+    <aside class="sidebar" id="sidebar">
+      <?php print $navMenu; ?>
+      <?php print render($page['sidebar']); ?>
+    </aside>
   </main>
 <?php endif; ?>
 
-<?php if ($page['main_suffix']): ?>
-  <?php print render($page['main_suffix']); ?>
-<?php endif; ?>
+
 
 <?php if ($page['footer']): ?>
   <footer id="footer" role="contentinfo" class="footer">

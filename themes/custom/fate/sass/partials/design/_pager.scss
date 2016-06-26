@@ -1,0 +1,12 @@
+.block-custom-pagers {
+  margin-top: $spacer-large;
+
+  a {
+    @include button;
+  }
+  .key {
+    margin: 0 $spacer-small;
+    position: relative;
+    top: 2px;
+  }
+}
