@@ -1,0 +1,5 @@
+.webform-client-form-1916 {
+  input[type=submit] {
+    @include button($padding: $spacer-small $spacer);
+  }
+}
