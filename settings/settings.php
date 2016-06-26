@@ -54,6 +54,7 @@ $conf['master_modules'] = array(
     'views',
     // More modules.
     'admin_views',
+    'admin_menu_toolbar',
     'backup_migrate',
     'devel',
     'diff',
