@@ -78,6 +78,24 @@
 <?php if ($page['content']): ?>
   <main id="main" role="main" class="content-wrapper">
     <article class="main-content">
+      <?php if ($messages): ?>
+        <div id="messages"><div class="section clearfix">
+            <?php print $messages; ?>
+          </div></div> <!-- /.section, /#messages -->
+      <?php endif; ?>
+
+      <?php if ($tabs): ?>
+        <div class="tabs">
+          <?php print render($tabs); ?>
+        </div>
+      <?php endif; ?>
+
+      <?php if ($title): ?>
+        <h1 class="page-title">
+          <?php print $title; ?>
+        </h1>
+      <?php endif; ?>
+
       <?php print render($page['content']); ?>
       <?php if ($page['main_suffix']): ?>
         <?php print render($page['main_suffix']); ?>

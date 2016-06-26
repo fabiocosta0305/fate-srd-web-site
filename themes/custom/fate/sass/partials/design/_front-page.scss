@@ -1,0 +1,41 @@
+.front {
+  .fate-products-title {
+    margin-bottom: 0;
+  }
+
+  .rules {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between
+  }
+  .rules-item {
+    @include index-card-bkg();
+    margin-bottom: $spacer-medium;
+    border: 1px solid $mediumGray;
+
+    @include breakpoint($break-medium) {
+      width: (percentage(1/2) - 2%);
+    }
+    @include breakpoint($break-large) {
+      width: (percentage(1/3) - 2%);
+    }
+
+    .rules__title {
+      margin: 0 auto $spacer-small;
+    }
+
+    p {
+      font-size: .9em;
+    }
+
+    .rules__button {
+      @include button($padding: ($spacer-small*.5) $spacer, $fontSize:.85em);
+    }
+  }
+}
+
+//<div class="rules-item">
+//          <h2 class="rules__title">Fate Core</h2>
+//          <p><strong>Fate Core is a dynamic and flexible roleplaying game</strong> built around <strong>proactive characters</strong> that you play. Fate Core does not have a default setting&nbsp;to&nbsp;encourage&nbsp;all styles of play.</p>
+//          <a href="/fate-core/basics" class="rules__button">Explore</a>
+//        </div>
