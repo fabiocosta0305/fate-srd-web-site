@@ -1,0 +1,43 @@
+.product-list {
+
+  .view-filters {
+    margin-bottom: $spacer-large;
+
+    //  Exposed filter
+    .views-widget-filter-field_publisher_tid {
+      .views-widget .description {
+        display: none;
+      }
+    }
+    .views-submit-button input[type=submit] {
+      @include button($fontSize:.85em, $padding: $spacer-small $spacer);
+    }
+  }
+
+  .view-content {
+    @include breakpoint($break-medium) {
+      font-size: .85em;
+    }
+
+    @include breakpoint($break-large) {
+      column-count: 2;
+    }
+  }
+
+  .views-row {
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid $mediumGray;
+    padding: $spacer-small;
+  }
+  .new {
+    background: $purple;
+    border-radius: .25em;
+    color: white;
+    padding: .25em .5em;
+    font-size: .7em;
+    top: -2px;
+    position: relative;
+  }
+}
+

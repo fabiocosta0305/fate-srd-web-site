@@ -24,6 +24,8 @@ rules:
   no-debug: 1
   no-ids: 1
   no-important: 1
+    exclude
+      - 'themes/custom/fate/sass/partials/design/_search.scss'
   hex-notation:
     - 2
     -

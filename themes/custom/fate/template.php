@@ -100,9 +100,6 @@ function fate_form_search_block_form_alter(&$form, &$form_state, $form_id) {
   $form['search_block_form']['#attributes']['placeholder'] = t('Search...');
   $form['search_block_form']['#title'] = t('<em>Search</em>'); // Change the text on the label element
   $form['search_block_form']['#title_display'] = 'invisible'; // Toggle label visibilty
-  // https://www.drupal.org/node/45295
-  $form['search_block_form']['#attributes']['onblur'] = "jQuery(this).removeClass('search-active');";
-  $form['search_block_form']['#attributes']['onfocus'] = "jQuery(this).addClass('search-active');";
 }
 
 /**
