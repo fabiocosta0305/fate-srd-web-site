@@ -4,7 +4,7 @@
 
 ============================================================ */
 .nav-menu {
-  @include gradient-vertical($yellow, darken($yellow,10%));
+  @include gradient-vertical($yellow, darken($yellow, 10%));
   padding: $spacer * 1.5;
   border-radius: $border-radius;
   box-shadow: $boxshadow;
@@ -15,8 +15,6 @@
 
   .nav-section {
     border-top: 1px solid $darkYellow;
-    padding-top: $spacer;
-    padding-bottom: $spacer;
   }
 
   h3 {
@@ -24,14 +22,13 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: 1em;
-    padding-left: $spacer-small;
-    padding-right: 16px;
+    padding: $spacer 16px $spacer $spacer-small;
     position: relative;
     text-transform: uppercase;
   }
 
   .nav-section-content {
-    margin-top: $spacer;
+    margin-bottom: $spacer;
   }
 
   ul.menu {
@@ -44,7 +41,7 @@
       padding-left: $spacer-small;
 
       &:hover {
-        background-color: darken($yellow,20%);
+        background-color: darken($yellow, 20%);
       }
 
       &.active {
@@ -72,7 +69,9 @@
         line-height: 1.1;
       }
 
-      ul { font-size:1em; }
+      ul {
+        font-size: 1em;
+      }
     }
   }
 
@@ -91,16 +90,32 @@
       cursor: pointer;
 
       &:after {
-        color: darken($yellow,55%);
+        color: darken($yellow, 55%);
         font-size: .8em;
         right: 6px;
+
       }
     }
+    //.menu-closed,
+    //.menu-open {
+    //  .nav-section-title:after {
+    //    top: 8px;
+    //
+    //    @include breakpoint($break-medium) {
+    //      top: 13px;
+    //    }
+    //  }
+    //}
 
     // Main menu
     .menu-closed {
       .nav-section-title {
-        @include icon-after($icon-plus, $position: absolute, $top: 3px);
+        @include icon-after($icon-plus, $position: absolute, $top: 8px);
+        &:after {
+          @include breakpoint($break-medium) {
+            top: 13px;
+          }
+        }
       }
       &.nav-section-content {
         display: none;
@@ -108,7 +123,12 @@
     }
     .menu-open {
       .nav-section-title {
-        @include icon-after($icon-minus, $position: absolute, $top: 3px);
+        @include icon-after($icon-minus, $position: absolute, $top: 8px);
+        &:after {
+          @include breakpoint($break-medium) {
+            top: 13px;
+          }
+        }
       }
     }
 
@@ -118,7 +138,7 @@
     }
     .menu-control {
       display: block;
-      color: darken($yellow,50%);
+      color: darken($yellow, 50%);
       cursor: pointer;
       font-size: .9em;
       line-height: 1.7em;
@@ -129,16 +149,22 @@
       text-align: center;
       width: 21px;
 
-      &:hover { background-color: darken($yellow,20%); }
+      &:hover {
+        background-color: darken($yellow, 20%);
+      }
 
-      &.menu-open { @include icon-after($icon-minus, $margin: 0); }
+      &.menu-open {
+        @include icon-after($icon-minus, $margin: 0);
+      }
       &.menu-closed {
         @include icon-after($icon-plus, $margin: 0);
         + ul.menu {
           display: none;
         }
       }
-      &:after { margin: 0; }
+      &:after {
+        margin: 0;
+      }
     }
   }
 }
