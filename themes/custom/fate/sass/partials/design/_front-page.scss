@@ -12,6 +12,7 @@
     @include index-card-bkg();
     margin-bottom: $spacer-medium;
     border: 1px solid $mediumGray;
+    width: 100%;
 
     @include breakpoint($break-medium) {
       width: (percentage(1/2) - 2%);

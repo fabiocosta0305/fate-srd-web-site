@@ -9,10 +9,6 @@ body {
   font-family: $ff-sans;
   font-size: 1em;
   line-height: 1.2;
-
-  @include breakpoint(max-width $break-medium) {
-    font-size: .8em;
-  }
 }
 
 h1,h2,h3,h4,h5,h6 {
