@@ -3,9 +3,14 @@
   flex-flow: row nowrap;
   align-items: center;
   padding: $spacer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-100;
 
   @include breakpoint($break-medium) {
-    padding: $spacer *1.5 $spacer-large;
+    padding: $spacer $spacer-large;
   }
 
   .site-name {

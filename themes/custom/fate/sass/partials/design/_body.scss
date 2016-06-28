@@ -6,5 +6,9 @@
 
 body {
   background: url('#{$img}/tweed.png') $lightGray;
-  //background-color: $lightGray;
+  padding-top: 40px;
+
+  @include breakpoint($break-medium) {
+    padding-top: 48px;
+  }
 }
