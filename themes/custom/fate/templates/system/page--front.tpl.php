@@ -12,7 +12,11 @@
   <main id="main" role="main" class="content-wrapper">
     <article class="main-content">
 
-      <div class="rules">
+      <h1 class="page-title">Fate Roleplaying Game SRD</h1>
+      <h2>Fate Roleplaying Game Resources At Your Fingertips</h2>
+      <p>The purpose of this site is to be a friendly, searchable, bookmarkable home for the Fate Roleplaying Game System Reference Document (SRD). For more information about the site, <a href="/about-site">see the about page</a>.</p>
+
+      <div class="rules" style="margin-top:40px;">
         <div class="rules-item">
           <h2 class="rules__title">Fate Core</h2>
           <p><strong>Fate Core is a dynamic and flexible roleplaying game</strong> built around <strong>proactive characters</strong> that you play. Fate Core does not have a default setting&nbsp;to&nbsp;encourage&nbsp;all styles of play.</p>
