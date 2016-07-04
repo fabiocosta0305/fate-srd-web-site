@@ -83,6 +83,23 @@ function fate_preprocess_page(&$vars) {
   $navMenu .= '</nav>';
   $vars['navMenu'] = $navMenu;
 
+  /*
+   * Add Fate book term above page title.
+   */
+  $node = menu_get_object();
+
+  if ($node) {
+    if ($node->type == "article") {
+
+      $tid = $node->field_tags['und'][0]['tid'];
+      $term = taxonomy_term_load($tid);
+      $name = $term->name;
+
+      // Sets breadcrumb
+      $vars['section'] = $name;
+    }
+  }
+
 }
 
 /**
