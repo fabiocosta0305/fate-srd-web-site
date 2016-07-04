@@ -23,6 +23,8 @@
 
     .rules__title {
       margin: 0 auto $spacer-small;
+      font-size: 1.5em;
+      line-height: 1;
     }
 
     p {
@@ -35,8 +37,3 @@
   }
 }
 
-//<div class="rules-item">
-//          <h2 class="rules__title">Fate Core</h2>
-//          <p><strong>Fate Core is a dynamic and flexible roleplaying game</strong> built around <strong>proactive characters</strong> that you play. Fate Core does not have a default setting&nbsp;to&nbsp;encourage&nbsp;all styles of play.</p>
-//          <a href="/fate-core/basics" class="rules__button">Explore</a>
-//        </div>

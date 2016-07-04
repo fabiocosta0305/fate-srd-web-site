@@ -93,29 +93,13 @@
         color: darken($yellow, 55%);
         font-size: .8em;
         right: 6px;
-
       }
     }
-    //.menu-closed,
-    //.menu-open {
-    //  .nav-section-title:after {
-    //    top: 8px;
-    //
-    //    @include breakpoint($break-medium) {
-    //      top: 13px;
-    //    }
-    //  }
-    //}
 
     // Main menu
     .menu-closed {
       .nav-section-title {
-        @include icon-after($icon-plus, $position: absolute, $top: 8px);
-        &:after {
-          @include breakpoint($break-medium) {
-            top: 13px;
-          }
-        }
+        @include icon-after($icon-plus, $position: absolute, $top: 13px);
       }
       &.nav-section-content {
         display: none;
@@ -123,12 +107,7 @@
     }
     .menu-open {
       .nav-section-title {
-        @include icon-after($icon-minus, $position: absolute, $top: 8px);
-        &:after {
-          @include breakpoint($break-medium) {
-            top: 13px;
-          }
-        }
+        @include icon-after($icon-minus, $position: absolute, $top: 13px);
       }
     }
 
