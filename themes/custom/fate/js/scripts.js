@@ -19,7 +19,6 @@
       function add_anchor(v) {
         t = $(v).text();
         t = format_anchor(t);
-        // var anchor_link = $(v).prev('.header_anchor').children('a').attr('id');
         var insert = '<a href="#'+ t +'" class="anchor"></a>';
         $(v).append(insert);
         $(v).attr('id', t);
@@ -42,6 +41,9 @@
         new_term = new_term.replace(')','');
         new_term = new_term.replace(')','');
         new_term = new_term.replace(')','');
+        new_term = new_term.replace('“','');
+        new_term = new_term.replace('”','');
+        new_term = new_term.replace(/["']/g, '');
         return new_term;
       }
 

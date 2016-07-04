@@ -41,6 +41,9 @@
         new_term = new_term.replace(')','');
         new_term = new_term.replace(')','');
         new_term = new_term.replace(')','');
+        new_term = new_term.replace('“','');
+        new_term = new_term.replace('”','');
+        new_term = new_term.replace(/["']/g, '');
         return new_term;
       }
 
