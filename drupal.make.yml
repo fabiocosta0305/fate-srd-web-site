@@ -13,6 +13,8 @@ projects:
     version: ~
   coder:
     version: ~
+  customfilter:
+    version: ~
   ctools:
     version: ~
   devel:
