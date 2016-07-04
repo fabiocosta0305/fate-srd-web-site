@@ -1,0 +1,18 @@
+a.anchor {
+  &:after {
+    @include font-smoothing;
+    color: darken($lightGray,30%);
+    content: $icon-link;
+    font-family: $ff-fontawesome;
+
+    font-size: .7em;
+    font-weight: normal;
+    margin-left: .25em;
+    position: relative;
+    top: -2px;
+
+  }
+  &:hover:after {
+    color: $purple;
+  }
+}
