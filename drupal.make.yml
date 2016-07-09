@@ -82,6 +82,8 @@ projects:
     version: ~
   views_bulk_operations:
     version: ~
+  views_natural_sort:
+    version: ~
   webform:
     version: ~
   wysiwyg:
