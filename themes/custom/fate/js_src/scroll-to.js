@@ -11,7 +11,7 @@
 (function ($, Drupal) {
   Drupal.behaviors.fateScrollTo = {
     attach: function (context) {
-      var $root = $('html, body', context);
+      var $root = $('html, body');
       var offset = 75;
 
       $('a[href*=#]:not([href=#])').click(function() {
@@ -19,9 +19,14 @@
 
         $root.animate({
           scrollTop: $(href).offset().top - offset
-        }, function () {
-          window.location.hash = href;
         });
+
+        if(history.pushState) {
+          history.pushState(null, null, href);
+        }
+        else {
+          location.hash = href;
+        }
 
         return false;
       });
