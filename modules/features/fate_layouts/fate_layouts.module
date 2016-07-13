@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Fate Layouts feature.
- */
-
-include_once 'fate_layouts.features.inc';
