@@ -1,7 +1,7 @@
 @mixin button($bkgc: $blue, $padding: 0 $spacer-small, $fontSize: 1em) {
   display: inline-block;
   background: $bkgc;
-  border: $darkBlue 1px solid;
+  border: darken($bkgc,10%) 1px solid;
   border-bottom-width: 3px;
   border-radius: $border-radius;
   color: #FFF;
