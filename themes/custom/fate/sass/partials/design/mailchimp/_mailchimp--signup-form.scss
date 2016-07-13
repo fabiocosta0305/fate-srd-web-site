@@ -1,0 +1,37 @@
+.mailchimp-signup {
+  @include gradient-vertical($blue, darken($blue, 10%));
+  margin-top: $block-spacing;
+  border-radius: $border-radius;
+  box-shadow: $boxshadow;
+  padding: $spacer * 1.5;
+
+  @include breakpoint($break-medium) {
+    padding: $spacer-medium;
+  }
+
+  h2 {
+    margin-bottom: $spacer;
+    color: #FFF;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $spacer-small;
+    color: lighten($blue,35%);
+    font-size: .85em;
+    text-transform: uppercase;
+  }
+
+  input[type=text] {
+    border-radius: $border-radius-small;
+    border: none;
+    padding: 0 $spacer-small;
+    height: 30px;
+    width: 100%;
+  }
+
+  input[type=submit] {
+    @include button($bkgc: $orange, $padding: $spacer-small $spacer);
+    margin-top:$spacer;
+  }
+}

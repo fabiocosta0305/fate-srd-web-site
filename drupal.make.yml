@@ -169,6 +169,6 @@ libraries:
     type: "library"
     download:
       type: "get"
-      url: "https://bitbucket.org/mailchimp/mailchimp-api-php/get/2.0.6.zip"
+      url: "https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.zip"
     destination: "libraries"
     directory_name: "mailchimp"

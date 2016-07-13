@@ -21,6 +21,5 @@ features[user_permission][] = administer mailchimp activity
 features[user_permission][] = administer mailchimp campaigns
 features[user_permission][] = administer mailchimp signup entities
 features[user_permission][] = use text format mailchimp_campaign
-features[variable][] = mailchimp_api_key
 features[variable][] = mailchimp_batch_limit
 features[variable][] = mailchimp_cron

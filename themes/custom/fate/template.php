@@ -139,9 +139,20 @@ function fate_preprocess_region(&$vars) {
  */
 function fate_preprocess_block(&$vars) {
 
+  /**
+   * Footer menu.
+   */
   if ($vars['block']->module == 'menu' && $vars['block']->delta == 'menu-footer') {
     $vars['classes_array'][] = drupal_html_class('nav-footer');
   }
+
+  /**
+   * Mailchimp signup.
+   */
+  if ($vars['block']->module == 'mailchimp_signup' && $vars['block']->delta == 'main_mailchimp_signup_form') {
+    $vars['classes_array'][] = drupal_html_class('mailchimp-signup');
+  }
+
 }
 // */
 

@@ -32,6 +32,9 @@
         "drush updb -y",
         "drush fra -y",
         "drush cc drush"
+      ],
+      "mailchimp": [
+        "bash -c \"cd ./sites/all/libraries/mailchimp && composer install\""
       ]
     }
   },
