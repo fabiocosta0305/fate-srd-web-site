@@ -25,26 +25,7 @@
       }
 
       function format_anchor(term) {
-        var new_term = term.replace(/ /g,'-').toLowerCase();
-        new_term = new_term.replace('?','');
-        new_term = new_term.replace('?','');
-        new_term = new_term.replace('?','');
-        new_term = new_term.replace(',','');
-        new_term = new_term.replace(',','');
-        new_term = new_term.replace(',','');
-        new_term = new_term.replace(':','');
-        new_term = new_term.replace(':','');
-        new_term = new_term.replace(':','');
-        new_term = new_term.replace('(','');
-        new_term = new_term.replace('(','');
-        new_term = new_term.replace('(','');
-        new_term = new_term.replace(')','');
-        new_term = new_term.replace(')','');
-        new_term = new_term.replace(')','');
-        new_term = new_term.replace('“','');
-        new_term = new_term.replace('”','');
-        new_term = new_term.replace(/["']/g, '');
-        return new_term;
+        return term.replace(/ /g, '-').replace(/[?,:()“”"'\’*]/g, '').replace(/^-/, '').toLowerCase();
       }
 
       $.each(h2,function() {
