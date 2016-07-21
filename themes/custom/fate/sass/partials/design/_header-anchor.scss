@@ -3,7 +3,7 @@ a.anchor {
     @include font-smoothing;
     color: darken($lightGray,30%);
     content: $icon-link;
-    font-family: $ff-fontawesome;
+    font-family: 'icomoon';
 
     font-size: .7em;
     font-weight: normal;
