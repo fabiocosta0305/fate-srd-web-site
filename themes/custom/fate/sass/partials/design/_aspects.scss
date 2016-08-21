@@ -3,9 +3,7 @@
   color: lighten($textColor,10%);
   font-family: $ff-sketch;
   font-size: .95em;
+  font-weight: normal;
+  font-style: italic;
   padding: 0 $spacer-small;
-
-  //.cke_editable & {
-  //  background: @yellow;
-  //}
 }

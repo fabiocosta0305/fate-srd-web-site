@@ -1,12 +1,16 @@
 .block-custom-pagers {
   margin-top: $spacer-large;
 
-  a {
-    @include button;
-  }
-  .key {
-    margin: 0 $spacer-small;
-    position: relative;
-    top: 2px;
+  .custom-pager {
+    @include list-reset-inline;
+
+    a {
+      @include button;
+    }
+    .key {
+      margin: 0 $spacer-small;
+      position: relative;
+      top: 2px;
+    }
   }
 }

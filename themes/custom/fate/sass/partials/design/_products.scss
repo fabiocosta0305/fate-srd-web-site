@@ -5,12 +5,21 @@
 
     //  Exposed filter
     .views-widget-filter-field_publisher_tid {
+      float: left;
+      width: auto;
+
       .views-widget .description {
         display: none;
       }
     }
-    .views-submit-button input[type=submit] {
-      @include button($fontSize:.85em, $padding: $spacer-small $spacer);
+    .views-submit-button {
+      margin-top: $spacer-medium;
+      margin-left: $spacer;
+      float: left;
+
+      input[type=submit] {
+        @include button($fontSize:.85em, $padding: $spacer-small $spacer);
+      }
     }
   }
 

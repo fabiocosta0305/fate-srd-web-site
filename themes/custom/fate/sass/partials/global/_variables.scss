@@ -20,9 +20,12 @@ $linkColor: $blue;
 $linkHover: $purple;
 
 // Fonts
-$ff-sans: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-basic: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$ff-proxima: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-sans: $ff-basic;
 $ff-serif: Georgia, "Times New Roman", Times, serif;
-$ff-sketch: "sketchnote-text", $ff-serif;
+$ff-sketchnote: "sketchnote-text", $ff-serif;
+$ff-sketch: $ff-serif;
 $ff-fate: "fate";
 $ff-icomoon: "icomoon";
 
