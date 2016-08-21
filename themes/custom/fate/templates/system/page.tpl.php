@@ -90,9 +90,14 @@
         </div>
       <?php endif; ?>
 
+      <?php if ($promo): ?>
+        <?php print $promo; ?>
+      <?php endif; ?>
+
       <?php if (isset($section)): ?>
         <p class="rules-section"><?php print $section; ?></p>
       <?php endif; ?>
+
       <?php if ($title): ?>
         <h1 class="page-title">
           <?php print $title; ?>

@@ -25,5 +25,9 @@
   .page-title {
     margin-top:0;
     font-size: 3em;
+
+    &.has-promo {
+      margin-bottom: 0;
+    }
   }
 }

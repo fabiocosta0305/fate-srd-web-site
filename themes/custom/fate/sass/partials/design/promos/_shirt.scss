@@ -1,0 +1,39 @@
+.shirt-promo-block {
+  // Show on large screens only.
+  @include breakpoint(max-width $break-medium-max-width) {
+    display: none;
+  }
+
+  @include block-basic;
+  padding: 0;
+
+  @include breakpoint($break-medium) {
+    padding: $spacer;
+  }
+
+  .content {
+    background: url('../img/fate-shirt.png') no-repeat top center;
+    background-size: contain;
+    padding: $spacer * 1.5;
+
+    @include breakpoint($break-medium) {
+      padding: 55% $spacer $spacer-medium;
+    }
+  }
+
+  a {
+    @include block-basic--call-to-action;
+    cursor: pointer;
+  }
+}
+
+.shirt-promo-text {
+  @include breakpoint($break-medium) {
+    display: none;
+  }
+  &::before {
+    content: $icon-star;
+    font-family: $ff-icomoon;
+    margin-right: $spacer * 0.5;
+  }
+}

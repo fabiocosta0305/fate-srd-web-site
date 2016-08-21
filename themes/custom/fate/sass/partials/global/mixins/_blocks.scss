@@ -1,0 +1,25 @@
+@mixin block-basic() {
+  @include gradient-vertical($blue, darken($blue, 10%));
+  margin-top: $block-spacing;
+  border-radius: $border-radius;
+  box-shadow: $boxshadow;
+  padding: $spacer * 1.5;
+
+  @include breakpoint($break-medium) {
+    padding: $spacer-medium;
+  }
+
+  h2 {
+    margin-bottom: $spacer;
+    color: #FFF;
+  }
+
+  p {
+    color: #FFF;
+  }
+}
+
+@mixin block-basic--call-to-action() {
+  @include button($bkgc: $orange, $padding: $spacer-small $spacer);
+  margin-top: $spacer;
+}

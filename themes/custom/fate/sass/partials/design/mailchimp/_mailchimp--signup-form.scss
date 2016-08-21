@@ -1,18 +1,5 @@
 .mailchimp-signup {
-  @include gradient-vertical($blue, darken($blue, 10%));
-  margin-top: $block-spacing;
-  border-radius: $border-radius;
-  box-shadow: $boxshadow;
-  padding: $spacer * 1.5;
-
-  @include breakpoint($break-medium) {
-    padding: $spacer-medium;
-  }
-
-  h2 {
-    margin-bottom: $spacer;
-    color: #FFF;
-  }
+  @include block-basic;
 
   label {
     display: block;
@@ -31,7 +18,6 @@
   }
 
   input[type=submit] {
-    @include button($bkgc: $orange, $padding: $spacer-small $spacer);
-    margin-top:$spacer;
+    @include block-basic--call-to-action;
   }
 }
