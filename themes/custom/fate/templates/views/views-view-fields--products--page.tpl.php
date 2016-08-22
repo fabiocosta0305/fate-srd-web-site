@@ -16,5 +16,4 @@ $publisher = $term->name;
 ?>
 
 <?php if (isset($new)) { print $new; } ?>
-<a href="<?php if (isset($url)) { print $url; } ?>"><?php print $title; ?></a>
-by <em><?php print $publisher; ?></em>
+<a href="<?php if (isset($url)) { print $url; } ?>"><?php print $title; ?></a> by <em> <?php print $publisher; ?></em>

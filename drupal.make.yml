@@ -102,6 +102,8 @@ projects:
     version: ~
   menu_expanded:
     version: ~
+  minihtml:
+    version: ~
   custom_pagers:
     version: "1.x-dev"
     patch:

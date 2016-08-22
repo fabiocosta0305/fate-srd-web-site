@@ -1,6 +1,9 @@
 .block-search {
   position: relative;
 
+  background: red;
+
+  input[type=search],
   input[type=text],
   input[type=submit] {
     background: transparent;
@@ -9,8 +12,10 @@
     color: $darkBlue;
     float: left;
     height: 22px;
+    box-sizing: border-box;
   }
-  input[type=text] {
+  input[type=search],
+  input[type=text]{
     background: lighten($blue,35%) !important;
     border-radius: $border-radius;
     font-size: .8em;
@@ -34,7 +39,7 @@
 }
 
 .search-submit {
-  font-family: 'icomoon';
+  font-family: $ff-icomoon;
 }
 
 .search-results {
