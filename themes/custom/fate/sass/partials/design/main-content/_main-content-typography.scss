@@ -1,18 +1,26 @@
 .main-content {
   line-height: 1.4;
 
+  @include breakpoint(max-width $break-medium) {
+    font-size: .9em;
+  }
+
   h1,h2,h3,h4,h5,h6 {
     color: $darkBlue;
     margin-top: $spacer-medium;
     margin-bottom: $spacer;
   }
   h2,h3,h4,h5,h6 {
-    line-height: 1;
+    line-height: 1.1;
   }
   h2 {
     margin-top: $spacer;
     margin-bottom: $spacer-small;
     font-size: 2.25em;
+
+    @include breakpoint(max-width $break-medium) {
+      font-size: 2em;
+    }
   }
 
   .rules-section {
@@ -26,8 +34,8 @@
     margin-top:0;
     font-size: 3em;
 
-    &.has-promo {
-      margin-bottom: 0;
+    @include breakpoint(max-width $break-medium) {
+      font-size: 2.75em;
     }
   }
 }

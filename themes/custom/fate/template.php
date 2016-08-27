@@ -97,13 +97,6 @@ function fate_preprocess_page(&$vars) {
     // Sets breadcrumb
     $vars['section'] = $name;
   }
-
-  /**
-   * Add shirt promo
-   */
-  $promo_text = "Support the Fate SRD. <a href='https://www.amazon.com/dp/B01KF1DM5I'>Buy a shirt</a>";
-  $promo = '<section class="promo shirt-promo-text">' . $promo_text . '</section>';
-  $vars['promo'] = $promo;
 }
 
 /**
