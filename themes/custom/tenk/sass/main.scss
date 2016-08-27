@@ -30,25 +30,71 @@ $spacer-xlarge: $spacer*4;
 
 *, *:before, *:after { box-sizing: border-box; }
 body {
+  display: flex;
   margin: 0;
+  min-height: 100vh;
+  flex-direction: column;
+  flex-flow: column nowrap;
   background: $lightGray;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   padding: 0;
 }
 
+header,
 main,
 footer {
-  padding: 2em;
+  padding: 0 2em;
+}
+
+header {
+  background: $blue;
+  color: #FFF;
+
+  h1 {
+    font-size: 1em;
+  }
+
+  a,
+  a:focus,
+  a:visited {
+    color: #FFF;
+  }
+}
+
+main {
+  padding-bottom: 2em;
+
+  h1 {
+    color: $darkBlue;
+    font-size: 2.5em;
+
+    small {
+      display: block;
+      font-size:.4em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+blockquote {
+  margin:2em 0 2em 2em;
+  color: darken($mediumGray,15%);
+}
+
+.aspect {
+  background: $yellow;
+  font-style: italic;
 }
 
 footer {
+  margin-top: auto;
   background: $textColor;
   font-size: .8em;
   color: $footerTextColor;
 
   ul {
     display: flex;
-    padding-left:0;
+    padding-left: 0;
 
     li {
       margin: 0 $spacer 0 0;
@@ -70,4 +116,8 @@ footer {
     float: right;
     max-width: 50%;
   }
+}
+
+.fate_font {
+  display: none;
 }
