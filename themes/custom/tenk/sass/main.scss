@@ -1,0 +1,73 @@
+/* ============================================================
+
+  Theme: Ten K theme
+  Author(s): Randy Oest oest@amazingrando.com
+
+============================================================ */
+
+// Colors
+$blue: #1B75BC;
+$darkBlue: #0A497A;
+$purple: #9A4699;
+$darkRed: #53121D;
+$lightGray: #F9F9F9;
+$mediumGray: darken($lightGray, 25%);
+$yellow: #FFF8B9;
+$darkYellow: darken($yellow,45%);
+$orange: #FF9100;
+$textColor: #333;
+$footerTextColor: darken(#FFF,20%);
+$linkColor: $blue;
+$linkHover: $purple;
+
+// Spacing
+$spacer: .625em;
+$spacer-small: $spacer*.5;
+$spacer-medium: $spacer*2;
+$spacer-large: $spacer*3;
+$spacer-xlarge: $spacer*4;
+
+
+*, *:before, *:after { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: $lightGray;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 0;
+}
+
+main,
+footer {
+  padding: 2em;
+}
+
+footer {
+  background: $textColor;
+  font-size: .8em;
+  color: $footerTextColor;
+
+  ul {
+    display: flex;
+    padding-left:0;
+
+    li {
+      margin: 0 $spacer 0 0;
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  a {
+    color: $yellow;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  img.pull-right {
+    margin: 0 0 $spacer-medium $spacer-medium;
+    float: right;
+    max-width: 50%;
+  }
+}

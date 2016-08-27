@@ -1,0 +1,19 @@
+name = Fate SRD
+description =  Fate theme based on Aurora.
+core = 7.x
+base theme = aurora
+
+; ========================================
+; Regions
+; ========================================
+
+regions[header]       = 'Header'
+regions[main_prefix]  = 'Main Region Prefix'
+regions[content]      = 'Main Region'
+regions[main_suffix]  = 'Main Region Suffix'
+regions[sidebar]      = 'Sidebar'
+regions[footer]       = 'Footer'
+
+
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts

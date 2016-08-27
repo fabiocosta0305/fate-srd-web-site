@@ -1,0 +1,22 @@
+{
+  "name": "fate",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "singularity": "~1.6.2",
+    "breakpoint-sass": "~2.6.1",
+    "sass-toolkit": "~2.9.0",
+    "compass-mixins": "~1.0.2",
+    "font-awesome": "fontawesome#~4.6.1"
+  },
+  "devDependencies": {
+    "north": "~0.2.0"
+  }
+}

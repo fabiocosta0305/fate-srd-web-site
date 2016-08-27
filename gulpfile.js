@@ -19,7 +19,8 @@
   var watch       = require('gulp-watch');
   var modernizr   = require('gulp-modernizr');
 
-  var themeDir = 'themes/custom/fate';
+  // var themeDir = 'themes/custom/fate';
+  var themeDir = 'themes/custom/tenk';
 
   var theme = {
     'css': themeDir + '/css',
