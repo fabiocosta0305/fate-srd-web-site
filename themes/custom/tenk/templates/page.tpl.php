@@ -78,17 +78,6 @@
 <?php if ($page['content']): ?>
   <main>
     <section>
-      <?php if ($messages): ?>
-        <div id="messages"><div class="section clearfix">
-            <?php print $messages; ?>
-          </div></div> <!-- /.section, /#messages -->
-      <?php endif; ?>
-
-      <?php if ($tabs): ?>
-        <div class="tabs">
-          <?php print render($tabs); ?>
-        </div>
-      <?php endif; ?>
 
       <?php if ($title): ?>
         <h1>

@@ -5,6 +5,8 @@
 
 ============================================================ */
 
+@import '../bower_components/breakpoint-sass/stylesheets/breakpoint';
+
 // Colors
 $blue: #1B75BC;
 $darkBlue: #0A497A;
@@ -40,31 +42,26 @@ body {
   padding: 0;
 }
 
-body {
-  > header,
-  > main,
-  > footer {
-    padding: 0 2em;
-  }
-
-  > header {
-    background: $blue;
-    color: #FFF;
-
-    h1 {
-      font-size: 1em;
-    }
-
-    a,
-    a:focus,
-    a:visited {
-      color: #FFF;
-    }
-  }
-
+header,
+main,
+footer {
+  padding: 0 2em;
 }
 
+header {
+  background: $blue;
+  color: #FFF;
 
+  h1 {
+    font-size: 1em;
+  }
+
+  a,
+  a:focus,
+  a:visited {
+    color: #FFF;
+  }
+}
 
 
 main {
@@ -79,6 +76,33 @@ main {
       font-size:.4em;
       text-transform: uppercase;
     }
+  }
+}
+
+.list-of-rules {
+  display: flex;
+  margin-top: $spacer-large;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  section {
+    margin-bottom: 2%;
+    background: #FFF;
+    border: 1px solid darken($lightGray,15%);
+    border-radius: 4px;
+    padding: 1em;
+    width: 100%;
+
+    @include breakpoint(700px) {
+      width: 49%;
+    }
+    @include breakpoint(1000px) {
+      width: 32%;
+    }
+  }
+  h2 {
+    margin-top: 0;
+    color: $darkBlue;
   }
 }
 
