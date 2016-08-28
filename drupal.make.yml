@@ -64,6 +64,8 @@ projects:
     version: ~
   honeypot:
     version: ~
+  insert_block:
+    version: ~
   linkit:
     version: ~
   jqmulti:
@@ -75,7 +77,7 @@ projects:
   link:
     version: ~
   menu_block:
-    version: ~
+    version: "2.x-dev"
   module_filter:
     version: ~
   pathologic:
@@ -126,8 +128,6 @@ projects:
     version: ~
   chosen:
     version: "2.0-beta4"
-  advanced_menu:
-    version: "1.x-dev"
   # Mailchimp
   mailchimp:
     version: ~

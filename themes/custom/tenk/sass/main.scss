@@ -40,26 +40,32 @@ body {
   padding: 0;
 }
 
-header,
-main,
-footer {
-  padding: 0 2em;
-}
-
-header {
-  background: $blue;
-  color: #FFF;
-
-  h1 {
-    font-size: 1em;
+body {
+  > header,
+  > main,
+  > footer {
+    padding: 0 2em;
   }
 
-  a,
-  a:focus,
-  a:visited {
+  > header {
+    background: $blue;
     color: #FFF;
+
+    h1 {
+      font-size: 1em;
+    }
+
+    a,
+    a:focus,
+    a:visited {
+      color: #FFF;
+    }
   }
+
 }
+
+
+
 
 main {
   padding-bottom: 2em;
