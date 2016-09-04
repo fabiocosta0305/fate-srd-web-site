@@ -149,3 +149,9 @@ DirectoryIndex index.php index.html index.htm
   # Fixes httpoxy. See https://www.drupal.org/SA-CORE-2016-003.
   RequestHeader unset Proxy
 </IfModule>
+
+# Redirect to HTTPS
+# http://drupal.stackexchange.com/questions/24072/how-to-simply-make-the-whole-site-https
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
