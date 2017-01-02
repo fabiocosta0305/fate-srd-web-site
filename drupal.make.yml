@@ -119,6 +119,8 @@ projects:
     version: ~
   magic:
     version: ~
+  composer_manager:
+    version: ~
   # Menu
   menu_node:
     version: ~

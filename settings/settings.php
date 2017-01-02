@@ -126,6 +126,8 @@ $conf['master_modules'] = array(
   'live' => array(),
 );
 
+$conf['https'] = TRUE;
+
 $update_free_access = FALSE;
 
 ini_set('session.gc_probability', 1);

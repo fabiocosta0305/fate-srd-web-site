@@ -56,6 +56,11 @@ DirectoryIndex index.php index.html index.htm
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Route to HTTPS
+  #https://my.bluehost.com/cgi/help/599
+  RewriteCond %{SERVER_PORT} 80
+  RewriteRule ^(.*)$ https://fate-srd.com/$1 [R=301,L]
+
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
@@ -150,8 +155,6 @@ DirectoryIndex index.php index.html index.htm
   RequestHeader unset Proxy
 </IfModule>
 
-# Redirect to HTTPS
-# http://drupal.stackexchange.com/questions/24072/how-to-simply-make-the-whole-site-https
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Allow fonts for Careform to load. Sept 2016.
+# http://stackoverflow.com/questions/25577981/font-from-origin-has-been-blocked-from-loading-by-cross-origin-resource-sharing
+Header add Access-Control-Allow-Origin "*"

@@ -1,5 +1,5 @@
 {
-  "name": "fate-update",
+  "name": "fate",
   "core": 7,
   "paths": {
     "make": "drupal.make.yml",
