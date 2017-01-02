@@ -127,7 +127,7 @@ projects:
   menu_node_views:
     version: ~
   chosen:
-    version: "2.0-beta4"
+    version: ~
   advanced_menu:
     version: "1.x-dev"
   # Mailchimp
