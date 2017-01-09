@@ -67,6 +67,7 @@ function fate_preprocess_page(&$vars) {
     'menu-sails-full-of-stars',
     'menu-three-rocketeers',
     'menu-venture-city',
+    'menu-war-of-ashes',
   ];
   $block_module = 'menu';
   $navMenu = '<nav class="nav-menu">';
