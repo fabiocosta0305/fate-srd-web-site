@@ -1,16 +1,33 @@
-.block-custom-pagers {
-  margin-top: $spacer-large;
+.menu-pager {
+  @include list-reset-inline;
 
-  .custom-pager {
-    @include list-reset-inline;
+  a {
+    @include button;
+    line-height: 1.2;
+  }
 
-    a {
-      @include button;
-    }
-    .key {
-      margin: 0 $spacer-small;
-      position: relative;
-      top: 2px;
-    }
+  &-previous,
+  &-next {
+    max-width:49%;
+  }
+  &-next {
+    float: right;
   }
 }
+
+//.block-custom-pagers {
+//  margin-top: $spacer-large;
+//
+//  .custom-pager {
+//    @include list-reset-inline;
+//
+//    a {
+//      @include button;
+//    }
+//    .key {
+//      margin: 0 $spacer-small;
+//      position: relative;
+//      top: 2px;
+//    }
+//  }
+//}

@@ -265,6 +265,7 @@ function fate_css_alter(&$css) {
     'modules/update/update.css' => FALSE,
     'modules/user/user.css' => FALSE,
     drupal_get_path('module', 'views') . '/css/views.css' => FALSE,
+    drupal_get_path('module', 'menu_pager') . '/css/menu_pager.css' => FALSE,
   );
   $css = array_diff_key($css, $exclude);
 }

@@ -133,6 +133,8 @@ projects:
   # Mailchimp
   mailchimp:
     version: ~
+  menu_pager:
+    version: "1.x-dev"
 
   import_html:
     type: "module"
