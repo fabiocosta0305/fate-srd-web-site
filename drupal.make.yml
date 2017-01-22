@@ -130,11 +130,12 @@ projects:
     version: ~
   advanced_menu:
     version: "1.x-dev"
-  # Mailchimp
   mailchimp:
     version: ~
   menu_pager:
     version: "1.x-dev"
+  views_datasource:
+    version: "1.0-alpha2"
 
   import_html:
     type: "module"
