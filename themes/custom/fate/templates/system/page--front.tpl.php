@@ -1,5 +1,3 @@
-
-
 <?php if ($page['header']): ?>
   <?php print render($page['header']); ?>
 <?php endif; ?>
@@ -69,6 +67,12 @@
           <h2 class="rules__title">Venture City</h2>
           <p><strong>A world of superpowers, villainous corporations, and ruthless gangs</strong>, set in a near-future where powers are for sale.</p>
           <a href="/venture-city/making-your-character-and-powers" class="rules__button">Read more...</a>
+        </div>
+
+        <div class="rules-item">
+          <h2 class="rules__title">War of Ashes</h2>
+          <p>Head off to adventure in a world where the inhabitants might look cute and cuddly but often carry pointy objects with which <strong>they might just decide to stab you</strong>.</p>
+          <a href="/war-ashes/introduction" class="rules__button">Read more...</a>
         </div>
 
       </div>
