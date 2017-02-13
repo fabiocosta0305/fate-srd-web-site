@@ -136,6 +136,8 @@ projects:
     version: "1.x-dev"
   views_datasource:
     version: "1.0-alpha2"
+  metatag:
+    version: ~
 
   import_html:
     type: "module"
