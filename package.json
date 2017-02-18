@@ -28,6 +28,9 @@
     "minimist": "~1.1.1",
     "sync-exec": "~0.5.0"
   },
+  "engines": {
+    "node": ">5.5.0"
+  },
   "scripts": {
     "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
   }
